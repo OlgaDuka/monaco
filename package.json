@@ -5,30 +5,33 @@
   "description": "",
   "devDependencies": {
     "@htmlacademy/editorconfig-cli": "^1.0.0",
-    "autoprefixer": "^8.3.0",
+    "autoprefixer": "^9.5.1",
     "browser-sync": "^2.23.7",
-    "css-mqpacker": "^6.0.2",
-    "del": "^3.0.0",
-    "eslint": "^4.19.1",
+    "css-mqpacker": "^7.0.0",
+    "del": "^4.1.1",
+    "eslint": "^5.16.0",
     "eslint-config-htmlacademy": "^0.5.2",
     "gulp": "^4.0.0",
     "gulp-concat": "^2.6.1",
     "gulp-csso": "^3.0.1",
     "gulp-gh-pages": "^0.5.4",
-    "gulp-imagemin": "^4.1.0",
+    "gulp-imagemin": "^5.0.3",
     "gulp-plumber": "^1.2.0",
-    "gulp-postcss": "^7.0.1",
+    "gulp-postcss": "^8.0.0",
+    "gulp-posthtml": "^3.0.4",
     "gulp-rename": "^1.2.2",
     "gulp-rigger": "^0.5.8",
     "gulp-sass": "^4.0.1",
     "gulp-sass-glob": "^1.0.9",
     "gulp-sourcemaps": "^2.6.4",
-    "gulp-svgmin": "^1.2.4",
-    "gulp-svgstore": "^6.1.1",
+    "gulp-svgmin": "^2.2.0",
+    "gulp-svgstore": "^7.0.1",
     "gulp-uglify": "^3.0.0",
-    "gulp-webp": "^3.0.0",
+    "gulp-webp": "^4.0.1",
+    "imagemin-jpeg-recompress": "^6.0.0",
     "node-normalize-scss": "^8.0.0",
-    "stylelint": "^9.2.0",
+    "posthtml-include": "^1.2.0",
+    "stylelint": "^10.0.1",
     "stylelint-config-htmlacademy": "^0.1.1"
   },
   "scripts": {
@@ -54,5 +57,11 @@
   ],
   "engines": {
     "node": "^10.0"
+  },
+  "dependencies": {
+    "acorn": "^6.1.1",
+    "fstream": "^1.0.12",
+    "npm": "^6.9.0",
+    "tar": "^4.4.8"
   }
 }

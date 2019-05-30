@@ -7,5 +7,7 @@ global/
   global.scss     # глобальные стили
   mixins.scss     # миксины
   variables.scss  # переменные
+plugins/*.scss    # стили подключаемых плагинов
+  
 main.scss         # подключение всех стилевых файлов
 ```

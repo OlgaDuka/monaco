@@ -17,6 +17,9 @@ var imagemin = require('gulp-imagemin');
 var webp = require('gulp-webp');
 var svgmin = require('gulp-svgmin');
 var svgstore = require('gulp-svgstore');
+var imageminJpegRecompress = require('imagemin-jpeg-recompress');
+var posthtml = require("gulp-posthtml");
+var include = require("posthtml-include");
 var rigger = require('gulp-rigger');
 var del = require('del');
 var ghPages = require('gulp-gh-pages');
@@ -36,6 +39,9 @@ gulp.task('html:del', function(done) {
 gulp.task('html:copy', function(done) {
   return gulp.src('*.html')
     .pipe(rigger())
+    .pipe(posthtml([
+      include()
+    ]))
     .pipe(gulp.dest('build'));
     done();
 });
@@ -45,7 +51,7 @@ gulp.task('html', gulp.series('html:del', 'html:copy'));
 // CSS
 
 gulp.task('style', function (done) {
-  return gulp.src('sass/main.scss')
+  return gulp.src('sass/style.scss')
     .pipe(plumber())
     .pipe(sourcemaps.init())
     .pipe(sassGlob())
@@ -53,7 +59,11 @@ gulp.task('style', function (done) {
       includePaths: require("node-normalize-scss").includePaths
     }))
     .pipe(postcss([
-      autoprefixer(),
+      autoprefixer({browsers: [
+          'last 2 versions',
+          'IE 11',
+          'Firefox ESR'
+        ]}),
       mqpacker({
         sort: true
       })
@@ -144,6 +154,11 @@ gulp.task('img:copy', function(done) {
 gulp.task('img:minify', function(done) {
   return gulp.src('build/img/**/*.{png,jpg,gif,svg}')
     .pipe(imagemin([
+      imageminJpegRecompress({
+        progressive: true,
+        max: 70,
+        min: 65
+      }),
       imagemin.optipng({optimizationLevel: 3}),
       imagemin.jpegtran({progressive: true}),
       imagemin.svgo()
@@ -152,7 +167,8 @@ gulp.task('img:minify', function(done) {
     done();
 });
 
-gulp.task('img', gulp.series('img:del', 'img:copy', 'img:minify'));
+gulp.task('img-prod', gulp.series('img:del', 'img:copy', 'img:minify'));
+gulp.task('img-dev', gulp.series('img:del', 'img:copy'));
 
 // CONTENT IMAGES
 
@@ -179,14 +195,18 @@ gulp.task('content', gulp.series('content:del', 'content:copy', 'content:convert
 // SVG-SPRITE
 
 gulp.task('svg-sprite:del', function(done) {
-  return del('build/img/svg-sprite');
+  return del('build/img/svg-sprite', 'build/img/sprite.svg');
   done();
 });
 
 gulp.task('svg-sprite:copy', function(done) {
-  return gulp.src('img/svg-sprite/*.svg')
+  return gulp.src('img/svg-sprite/icon-*.svg')
     .pipe(gulp.dest('build/img/svg-sprite'))
-    .pipe(svgmin())
+    .pipe(svgmin({
+      plugins: [{
+        removeViewBox: false
+      }]
+    }))
     .pipe(svgstore({
       inlineSvg: true
     }))
@@ -195,7 +215,15 @@ gulp.task('svg-sprite:copy', function(done) {
     done();
 });
 
-gulp.task('svg-sprite', gulp.series('svg-sprite:del', 'svg-sprite:copy'));
+gulp.task('svg:copy', function(done) {
+  return gulp.src('img/svg-sprite/*.svg')
+    .pipe(gulp.dest('build/img/svg-sprite'))
+    .pipe(svgmin())
+    .pipe(gulp.dest('build/img/svg-sprite'));
+  done();
+});
+
+gulp.task('svg-sprite', gulp.series('svg-sprite:del', 'svg-sprite:copy', 'svg:copy'));
 
 //GH-PAGES
 
@@ -228,17 +256,30 @@ gulp.task('serve', function(done) {
   done();
 });
 
+// DEV
+
+gulp.task('dev', gulp.series('clean',
+  gulp.series(
+    'svg-sprite',
+    'html',
+    'style',
+    'js',
+    'fonts',
+    'img-dev'
+  )
+));
+
 // BUILD
 
 gulp.task('build', gulp.series('clean',
   gulp.series(
+    'svg-sprite',
     'html',
     'style',
     'js',
     'fonts',
     'favicons',
-    'img',
-    'content',
-    'svg-sprite'
+    'img-prod',
+    'content'
   )
 ));

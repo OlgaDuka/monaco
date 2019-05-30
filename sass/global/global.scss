@@ -1,3 +1,106 @@
+html {
+  box-sizing: border-box;
+  height: 100%;
+  font-family: $default-font-family;
+  -webkit-tap-highlight-color: transparent;
+  scroll-behavior: smooth;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  font-family: inherit;
+}
+
 body {
-  width: auto;
+  overflow-x: hidden;
+  min-height: 100vh;
+  margin: 0;
+  min-width: $mobile-width;
+  font-family: $default-font-family;
+  font-size: 16px;
+  line-height: 26px;
+  font-weight: 300;
+  color: $default-font-color;
+  background-color: $white;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  display: block;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+.visually-hidden {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+
+  border: 0;
+
+  clip: rect(0 0 0 0);
+}
+
+.mobile-none {
+  display: none;
+
+  @include tablet {
+    display: block;
+  }
+}
+
+.tablet-none {
+  display: block;
+
+  @include tablet {
+    display: none;
+  }
+}
+
+.mobile-only {
+  display: block;
+
+  @include desktop {
+    display: none;
+  }
+}
+
+.desktop-only {
+  display: none;
+
+  @include desktop {
+    display: block;
+  }
+}
+
+input {
+  border-radius: 0;
+}
+
+input[type=text],
+input[type=tel]{
+  /* Remove First */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
 }

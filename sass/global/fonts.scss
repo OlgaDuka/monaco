@@ -1,26 +1,35 @@
 @font-face {
   font-weight: 400;
-  font-family: "OpenSans";
+  font-family: "RubikRegular";
   font-style: normal;
   src:
-    url("../fonts/opensans.woff2") format("woff2"),
-    url("../fonts/opensans.woff") format("woff");
+    url("../../fonts/rubik-regular.woff2") format("woff2"),
+    url("../../fonts/rubik-regular.woff") format("woff");
 }
 
 @font-face {
-  font-weight: 300;
-  font-family: "OpenSans";
+  font-weight: 500;
+  font-family: "RubikMedium";
   font-style: normal;
   src:
-    url("../fonts/opensanslight.woff2") format("woff2"),
-    url("../fonts/opensanslight.woff") format("woff");
+    url("../../fonts/rubik-medium.woff2") format("woff2"),
+    url("../../fonts/rubik-medium.woff") format("woff");
+}
+
+@font-face {
+  font-weight: 400;
+  font-family: "PlayfairDisplayRegular";
+  font-style: normal;
+  src:
+    url("../../fonts/playfairdisplay-regular.woff2") format("woff2"),
+    url("../../fonts/playfairdisplay-regular.woff") format("woff");
 }
 
 @font-face {
   font-weight: 700;
-  font-family: "OpenSans";
+  font-family: "PlayfairDisplayBold";
   font-style: normal;
   src:
-    url("../fonts/opensansbold.woff2") format("woff2"),
-    url("../fonts/opensansbold.woff") format("woff");
+    url("../../fonts/playfairdisplay-bold.woff2") format("woff2"),
+    url("../../fonts/playfairdisplay-bold.woff") format("woff");
 }

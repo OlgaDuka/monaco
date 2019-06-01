@@ -1,0 +1,197 @@
+.transport {
+  @include container();
+
+  @include desktop {
+    width: $desktop-content-width;
+  }
+}
+
+.transport__caption {
+  margin: 0 auto;
+  margin-bottom: 20px;
+  color: $title-dark;
+  @include second-font-reg(30px, 40px);
+  text-align: center;
+
+  span {
+    color: $text-orange;
+  }
+
+  @include tablet {
+    margin-bottom: 30px;
+    width: 350px;
+    @include second-font-reg(50px, 60px);
+  }
+}
+
+.transport__slider {
+  @include desktop {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
+
+.transport__container {
+  margin-bottom: 15px;
+  width: 100%;
+  padding: 10px 10px 10px 20px;
+  border: 1px solid $border-gray;
+
+  @include tablet {
+    padding: 40px 40px;
+    background-image: url("../../img/svg-sprite/icon-traffic.svg");
+    background-repeat: no-repeat;
+    background-position: top 30px right 30px;
+
+    &--train {
+      background-image: url("../../img/svg-sprite/icon-subway.svg");
+    }
+
+    &--helicopter {
+      background-image: url("../../img/svg-sprite/icon-helicopter.svg");
+    }
+
+    &--taxi {
+      background-image: url("../../img/svg-sprite/icon-taxi.svg");
+    }
+  }
+
+  @include desktop {
+    padding: 25px 10px 30px 40px;
+    width: 590px;
+    height: 410px;
+
+    &--helicopter,
+    &--taxi {
+      height: 370px;
+    }
+
+    &:hover {
+      box-shadow: 0px 10px 30px $shadow;
+      transform: translateY(-5px);
+
+    }
+  }
+}
+
+.transport__item {
+
+}
+
+.transport__type {
+  margin-top: 10px;
+  color: $title-dark;
+  @include second-font-reg(24px, 30px, 0.4px);
+}
+
+.transport__parameters {
+  margin-bottom: 20px;
+  display: flex;
+  width: 100%;
+
+}
+
+.transport__icon {
+  margin-right: 10px;
+}
+
+.transport__value {
+  color: $title-dark;
+  margin-right: 30px;
+}
+
+.transport__plan {
+  padding-left: 30px;
+  border-left: 1px dashed $border-gray;
+
+  @include desktop {
+    padding-left: 20px;
+  }
+}
+
+.transport__plan-item {
+  margin-bottom: 15px;
+  @include font-reg(15px, 24px, 0.4px);
+  position: relative;
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 9px;
+    left: -33px;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: $bg-orange;
+  }
+
+  @include tablet {
+    line-height: 30px;
+  }
+
+  @include desktop {
+    &:before {
+      left: -23px;
+    }
+  }
+}
+
+.transport__note {
+  padding-left: 30px;
+  @include font-reg(12px, 14px, 0.4px);
+  position: relative;
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 3px;
+    height: 12px;
+    background-color: $bg-orange;
+  }
+
+  &:after {
+    content: '';
+    position: absolute;
+    top: 15px;
+    left: 0;
+    width: 3px;
+    height: 3px;
+    border-radius: 50%;
+    background-color: $bg-orange;
+  }
+}
+
+.transport .slick-dotted.slick-slider {
+  margin-bottom: 70px;;
+}
+
+.transport .slick-dots li button::before {
+  content: '';
+  top: 0;
+  left: 0;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  opacity: 1;
+  background-color: $border-gray;
+}
+
+.transport .slick-dots li button {
+  position: relative;
+  &:hover::before {
+    background-color: $bg-orange;
+  }
+}
+
+.transport .slick-dots li.slick-active button::before {
+  background-color: $bg-orange;
+}
+
+.transport .slick-dots li {
+  margin: 0;
+  width: 15px;
+  height: 15px;
+}

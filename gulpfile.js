@@ -10,6 +10,7 @@ var autoprefixer = require('autoprefixer');
 var server = require('browser-sync').create();
 var mqpacker = require('css-mqpacker');
 var minifycss = require('gulp-csso');
+var babel = require('gulp-babel');
 var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
 var rename = require('gulp-rename');
@@ -100,6 +101,9 @@ gulp.task('js:scripts', function(done) {
     .pipe(plumber())
     .pipe(sourcemaps.init())
     .pipe(concat('main.js'))
+    .pipe(babel({
+      presets: ['@babel/env']
+    }))
     .pipe(gulp.dest('build/js'))
     .pipe(uglify())
     .pipe(sourcemaps.write())
@@ -202,24 +206,20 @@ gulp.task('svg-sprite:del', function(done) {
 gulp.task('svg-sprite:copy', function(done) {
   return gulp.src('img/svg-sprite/icon-*.svg')
     .pipe(gulp.dest('build/img/svg-sprite'))
-    .pipe(svgmin({
-      plugins: [{
-        removeViewBox: false
-      }]
-    }))
+    .pipe(svgmin())
     .pipe(svgstore({
       inlineSvg: true
     }))
-    .pipe(rename('sprite.svg'))
+    //.pipe(rename('sprite.svg'))
     .pipe(gulp.dest('build/img'));
     done();
 });
 
 gulp.task('svg:copy', function(done) {
-  return gulp.src('img/svg-sprite/*.svg')
-    .pipe(gulp.dest('build/img/svg-sprite'))
+  return gulp.src('img/*.svg')
+    .pipe(gulp.dest('build/img'))
     .pipe(svgmin())
-    .pipe(gulp.dest('build/img/svg-sprite'));
+    .pipe(gulp.dest('build/img'));
   done();
 });
 
@@ -260,12 +260,12 @@ gulp.task('serve', function(done) {
 
 gulp.task('dev', gulp.series('clean',
   gulp.series(
-    'svg-sprite',
     'html',
     'style',
     'js',
     'fonts',
-    'img-dev'
+    'img-dev',
+    'svg-sprite'
   )
 ));
 
@@ -273,13 +273,13 @@ gulp.task('dev', gulp.series('clean',
 
 gulp.task('build', gulp.series('clean',
   gulp.series(
-    'svg-sprite',
     'html',
     'style',
     'js',
     'fonts',
     'favicons',
     'img-prod',
-    'content'
+    'content',
+    'svg-sprite'
   )
 ));

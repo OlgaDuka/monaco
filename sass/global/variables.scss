@@ -1,8 +1,10 @@
 // resolutions
 $mobile-width: 320px;
 $tablet-width: 768px;
-$desktop-width: 1280px;
+$desktop-width: 1200px;
 $container-desktop-width-maxi: 1920px;
+$tablet-content-width: 688px;
+$desktop-content-width: 1190px;
 
 // retina
 $retina2x-dpi: 144dpi;
@@ -11,23 +13,23 @@ $retina3x-dpi: 288dpi;
 $retina3x-dppx: 3dppx;
 
 // fonts
-$default-font-family: "OpenSans", arial, sans-serif;
-$default-font-color: #676c7e;
-$default-fs: 16px;
-$default-li: 24px;
+$default-font-family: "RubikRegular", arial, sans-serif;
+$default-font-color: #878787;
+$default-fs: 15px;
+$default-li: 30px;
 $default-ls: 1.33px;
 
 // color
 $white: #ffffff;
-$black: #000000;
-$bg-dark-gray: #2b303a;
-$bg-blue-light: #f1f2f7;
-$title-dark: #3d414d;
-$text-gray: #676c7e;
-$text-dark: #4a4a4a;
-$text-dark2: #4e5160;
-$red: #c51630;
-$red2: #c51430;
-$shadow: rgba(61, 65, 77, 0.2);
-$bg-caption: #3e414e;
-$arrow-gray: #b8bbc3;
+$black: #252525;
+$bg-gray: #cecece;
+$light-gray: #a5a5a5;
+$title-dark: #252525;
+$text-gray: #878787;
+$border-gray: #eaeaea;
+$orange-bright: #ff6f6f;
+$text-orange: #e9ab78;
+$bg-orange: #ffc887;
+$red: #dd0c2f;
+
+$shadow: rgba(37, 37, 37, 0.15);

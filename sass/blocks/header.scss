@@ -1,0 +1,50 @@
+.header {
+  @include container(0,0,0,0,0,0);
+}
+
+.header__content {
+
+}
+
+.header__top {
+
+}
+
+.header__logo-wrapper {
+
+}
+
+.header__logo-ostrovok {
+
+}
+
+.header__logo-monaco {
+
+}
+
+.header__caption {
+
+}
+
+.header__search {
+
+}
+
+.header__scroll-down {
+
+}
+
+.header__text {
+
+}
+
+.header__btn {
+
+}
+
+.header__description {
+  margin-bottom: 8px;
+  color: $text-gray;
+  @include font-reg(15px, 30px, 0.4px);
+  text-align: center;
+}

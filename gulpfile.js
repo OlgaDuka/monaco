@@ -273,13 +273,13 @@ gulp.task('dev', gulp.series('clean',
 
 gulp.task('build', gulp.series('clean',
   gulp.series(
-    'html',
     'style',
     'js',
     'fonts',
     'favicons',
     'img-prod',
     'content',
-    'svg-sprite'
+    'svg-sprite',
+    'html'
   )
 ));

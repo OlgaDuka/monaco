@@ -1,5 +1,6 @@
 .lifehack {
   @include container();
+  background-image: url('https://of.worldota.net/travel/monaco_project/static/img/ostrovok-logo.svg');
 }
 
 .lifehack__caption {
@@ -15,13 +16,27 @@
 
   @include tablet {
     margin-bottom: 30px;
-    width: 350px;
-    @include second-font-reg(50px, 60px);
+    width: 450px;
+    @include second-font-reg(50px, 60px, 0.4px);
+  }
+
+  @include desktop {
+    width: 730px;
   }
 }
 
 .lifehack__slider {
+  @include tablet {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 
+  @include desktop {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 }
 
 .lifehack__container {
@@ -35,13 +50,17 @@
     flex-flow: column;
     align-items: center;
     padding: 0;
-    width: 216px;
+    width: $tablet-content-width;
     padding-top: 13px;
   }
 
   @include desktop {
-    width: 360px;
+    width: 550px;
     padding-top: 0;
+
+    &:nth-child(odd) {
+      margin-right: 50px;
+    }
   }
 }
 
@@ -53,6 +72,13 @@
   align-items: center;
   outline: none;
   position: relative;
+
+  @include tablet {
+    width: 100%;
+    padding-top: 0;
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }
 
 .lifehack__icon {
@@ -75,8 +101,15 @@
   }
 
   @include tablet {
+    width: 80px;
+    height: 80px;
+    position: relative;
     margin-right: 0;
     margin-bottom: 5px;
+
+    &::after {
+      height: 80px;
+    }
   }
 
   @include desktop {
@@ -89,6 +122,20 @@
   top: 30px;
   left: 50%;
   transform: translateX(-50%);
+
+  @include tablet {
+    top: 20px;
+  }
+}
+
+.lifehack__wrap {
+  @include tablet {
+    width: 570px;
+  }
+
+  @include desktop {
+    width: 450px;
+  }
 }
 
 .lifehack__name {
@@ -96,11 +143,19 @@
   color: $title-dark;
   @include second-font-reg(24px, 30px, 0.4px);
   text-align: center;
+
+  @include tablet {
+    text-align: left;
+  }
 }
 
 .lifehack__text {
   @include font-reg(15px, 30px, 0.4px);
   text-align: center;
+
+  @include tablet {
+    text-align: left;
+  }
 }
 
 .lifehack__name--small {

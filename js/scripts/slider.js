@@ -42,3 +42,17 @@ $('.lifehack__slider').slick({
     }
   ]
 });
+
+$('.stop__slider').slick({
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  arrows: false,
+  dots: true,
+  mobileFirst: true,
+  responsive: [
+    {
+      breakpoint: TABLET_WIDTH,
+      settings: 'unslick'
+    }
+  ]
+});

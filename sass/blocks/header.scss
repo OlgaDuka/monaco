@@ -1,5 +1,21 @@
 .header {
-  @include container(0,0,0,0,0,0);
+  width: 100%;
+  min-height: 580px;
+  padding-bottom: 50px;
+  background-color: $bg-gray;
+  background-image: url('../../img/bg_main_mobile.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  overflow: hidden;
+
+  @include tablet {
+    background-image: url('../../img/bg_main_tablet.jpg');
+  }
+
+  @include desktop {
+    background-image: url('../../img/bg_main.jpg');
+  }
 }
 
 .header__content {
@@ -7,23 +23,48 @@
 }
 
 .header__top {
-
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .header__logo-wrapper {
-
+  margin-top: 10px;
+  height: 30px;
+  display: flex;
+  justify-content: space-around;
 }
 
-.header__logo-ostrovok {
+.header__logo {
+  width: 162px;
+  height: 30px;
+  background-repeat: no-repeat;
 
+
+  &--ostrovok {
+    margin-top: 13px;
+    background-image: url('../../img/ostrovok-logo.svg');
+    background-size: 162px 20px;
+  }
+  &--monaco {
+    background-image: url('../../img/monako-visit-logo.svg');
+    background-size: 96px 30px;
+  }
 }
 
-.header__logo-monaco {
 
+.header__title {
+  color: $white;
+  @include second-font-bold(62px, 83px);
+  font-weight: 900;
+  text-align: center;
+  text-transform: uppercase;
 }
 
 .header__caption {
-
+  color: $white;
+  @include font-medium(18px, 21px, 1.3px);
+  text-align: center;
 }
 
 .header__search {
@@ -31,7 +72,11 @@
 }
 
 .header__scroll-down {
+  display: none;
 
+  @include tablet {
+    display: flex;
+  }
 }
 
 .header__text {
@@ -40,11 +85,4 @@
 
 .header__btn {
 
-}
-
-.header__description {
-  margin-bottom: 8px;
-  color: $text-gray;
-  @include font-reg(15px, 30px, 0.4px);
-  text-align: center;
 }

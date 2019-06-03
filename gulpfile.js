@@ -260,12 +260,12 @@ gulp.task('serve', function(done) {
 
 gulp.task('dev', gulp.series('clean',
   gulp.series(
-    'html',
     'style',
     'js',
     'fonts',
     'img-dev',
-    'svg-sprite'
+    'svg-sprite',
+    'html',
   )
 ));
 

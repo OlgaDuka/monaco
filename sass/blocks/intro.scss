@@ -1,0 +1,10 @@
+.intro {
+  @include container();
+}
+
+.intro__description {
+  margin-bottom: 8px;
+  color: $text-gray;
+  @include font-reg(15px, 30px, 0.4px);
+  text-align: center;
+}

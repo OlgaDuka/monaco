@@ -1,0 +1,246 @@
+.search {
+  margin: 0 auto;
+  width: 308px;
+  height: 290px;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 10px 0;
+  background-color: rgba(255, 255, 255, 0.75);
+  border-radius: 40px;
+
+  @include tablet {
+    width: $tablet-content-width;
+    padding-left: 10px;
+    padding-right: 10px;
+    box-sizing: border-box;
+    height: 80px;
+    flex-flow: row;
+    justify-content: space-between;
+    border-radius: 60px;
+  }
+
+  @include desktop {
+    width: 850px;
+    height: 120px;
+    padding-left: 31px;
+    padding-right: 31px;
+    border-radius: 60px;
+  }
+}
+
+.search__btn {
+  margin: 0;
+  margin-bottom: 10px;
+  padding: 12px 0 12px 22px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 288px;
+  height: 60px;
+  background: $white;
+  box-sizing: border-box;
+  border-radius: 30px;
+  outline: none;
+  border: none;
+  text-align: left;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  @include tablet {
+    margin: 0;
+    margin-right: 10px;
+    width: 159px;
+    height: 60px;
+  }
+
+  @include desktop {
+    width: 190px;
+  }
+}
+
+.search__wrap {
+  margin-left: 20px;
+
+  @include tablet {
+    margin-left: 10px;
+  }
+
+  @include desktop {
+    margin-left: 25px;
+  }
+}
+
+.search__dates {
+  @include tablet {
+    display: flex;
+  }
+}
+
+.search__label {
+  display: block;
+  color: $light-gray;
+  @include font-reg(14px, 17px);
+}
+
+.search__date {
+  display: block;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  color: $black;
+  @include font-medium(15px, 18px);
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  @include tablet {
+    width: 80px;
+  }
+}
+
+.search__guest-sum {
+  display: block;
+  color: $black;
+  @include font-medium(15px, 18px);
+}
+
+.search__goto {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  width: 288px;
+  height: 60px;
+  padding-top: 6px;
+  padding-bottom: 8px;
+  background-color: $bg-orange;
+  border-radius: 30px;
+  border: none;
+  box-sizing: border-box;
+  outline: none;
+
+  &:hover {
+    cursor: pointer;
+    background-color: $orange-bright;
+  }
+
+  @include tablet {
+    width: 159px;
+    height: 60px;
+  }
+
+  @include desktop {
+    width: 190px;
+  }
+}
+
+.search__goto-text {
+  color: $white;
+  @include font-medium(15px, 18px);
+}
+
+.search__calendar {
+  display: none;
+}
+
+.search__guest-change {
+  position: absolute;
+  background-color: $white;
+  width: 240px;
+  height: 100px;
+  z-index: 10;
+  box-sizing: border-box;
+  padding: 20px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.07);
+  border-radius: 10px;
+  display: none;
+
+  &::after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 11px;
+    height: 11px;
+    background-color: #ffffff;
+    transform: rotate(45deg) translateX(-50%);
+    top: 0;
+    left: 50%;
+  }
+}
+
+.search__guest-wrapper {
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.search__guest-btn {
+  width: 21px;
+  height: 21px;
+  background-color: $bg-orange;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  position: relative;
+
+  &:hover {
+    background-color: $orange-bright;
+  }
+
+  &::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 9px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 9px;
+    height: 3px;
+    background-color: #fff;
+  }
+
+  &--plus {
+    &::before {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 6px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 3px;
+      height: 9px;
+      background-color: #fff;
+    }
+  }
+
+  &:disabled {
+    background-color: $bg-gray;
+  }
+}
+
+.search__guest-item {
+  display: flex;
+  justify-content: space-between;
+}
+
+.search__guest-count-cover {
+  width: 100px;
+  display: flex;
+  justify-content: space-between
+}
+
+.search__guest-name {
+  color: $black;
+  @include font-medium(15px, 18px);
+}
+
+.search__guest-count {
+  color: $black;
+  @include font-medium(15px, 18px);
+}

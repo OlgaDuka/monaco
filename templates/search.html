@@ -1,19 +1,40 @@
 <form class="search">
   <div class="search__dates">
     <div class="search__btn search__btn--check check">
-      <span class="search__label">Заселение</span>
-      <input type="text" class="search__date check-calendar" readonly="">
+      <div class="search__icon">
+        <svg class="search__icon-date" width="16" height="16">
+          <use xlink:href="#icon-calendar-in"></use>
+        </svg>
+      </div>
+      <div class="search__wrap">
+        <span class="search__label">Заселение</span>
+        <input type="text" class="search__date check-calendar" readonly="">
+      </div>
     </div>
     <div class="search__btn search__btn--eviction eviction">
-      <span class="search__label">Выселение</span>
-      <input type="text" class="search__date eviction-calendar" readonly="">
+      <div class="search__icon">
+        <svg class="search__icon-date" width="16" height="16">
+          <use xlink:href="#icon-calendar-out"></use>
+        </svg>
+      </div>
+      <div class="search__wrap">
+        <span class="search__label">Выселение</span>
+        <input type="text" class="search__date eviction-calendar" readonly="">
+      </div>
     </div>
   </div>
 
   <div class="search__guest">
     <button class="search__btn guest" type="button">
-      <span class="search__label">Номер для</span>
-      <span class="search__guest-sum full-sum">2 гостей</span>
+      <div class="search__icon">
+        <svg class="search__icon-human" width="16" height="17">
+          <use xlink:href="#icon-human"></use>
+        </svg>
+      </div>
+      <div class="search__wrap">
+        <span class="search__label">Номер для</span>
+        <span class="search__guest-sum full-sum">2 гостей</span>
+      </div>
     </button>
     <div class="search__guest-change">
       <div class="search__guest-wrapper">

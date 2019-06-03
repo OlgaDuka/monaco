@@ -9,7 +9,7 @@
   max-width: $tablet-width;
 
   @media (min-width: $tablet-width) {
-    max-width: $desktop-width;
+    max-width: $tablet-width;
     padding-left: $lTabl;
     padding-right: $rTabl;
   }

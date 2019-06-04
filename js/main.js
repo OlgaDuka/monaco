@@ -219,6 +219,24 @@ function makeForm(selection) {
   });
 }
 
+var limit = $(window).height() / 4;
+var backToTop = $('#up-btn'); // Appearing and disappearing of the 'up' button on the first screen
+// and fixed menu on top screen
+
+$(window).scroll(function () {
+  if ($(this).scrollTop() > limit) {
+    backToTop.fadeIn();
+  } else {
+    backToTop.fadeOut();
+  }
+}); // Soft scroll to the top
+
+backToTop.click(function () {
+  $('body, html').animate({
+    scrollTop: 0
+  }, 100);
+  return false;
+});
 var TABLET_WIDTH = 768 - 1;
 var DESKTOP_WIDTH = 1190 - 1;
 $('.advantages__slider').slick({

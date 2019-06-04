@@ -1183,7 +1183,7 @@ input[type=tel] {
   height: 580px;
   padding-top: 136px;
   background-color: #cecece;
-  background-image: url("../../img/bg_footer_mobile.jpg");
+  background-image: url("../img/bg_footer_mobile.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
@@ -1206,7 +1206,7 @@ input[type=tel] {
   min-height: 580px;
   padding-bottom: 50px;
   background-color: #cecece;
-  background-image: url("../../img/bg_main_mobile.jpg");
+  background-image: url("../img/bg_main_mobile.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
@@ -1250,11 +1250,11 @@ input[type=tel] {
   cursor: pointer; }
   .header__logo--ostrovok {
     margin-top: 13px;
-    background-image: url("../../img/ostrovok-logo.svg");
+    background-image: url("../img/ostrovok-logo.svg");
     background-size: 162px 20px; }
   .header__logo--monaco {
     width: 96px;
-    background-image: url("../../img/monako-visit-logo.svg");
+    background-image: url("../img/monako-visit-logo.svg");
     background-size: 96px 30px; }
 
 .header__title {
@@ -1293,7 +1293,7 @@ input[type=tel] {
 .lifehack {
   height: 928px;
   background-color: #ffffff;
-  background-image: url("../../img/bg_lifehack_mobile.jpg");
+  background-image: url("../img/bg_lifehack_mobile.jpg");
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center bottom;
@@ -1473,7 +1473,8 @@ input[type=tel] {
   font-size: 13px;
   line-height: 15px;
   letter-spacing: 0.4px;
-  font-weight: 500; }
+  font-weight: 500;
+  text-align: center; }
 
 .scroll__btn {
   background-color: transparent;
@@ -1754,11 +1755,8 @@ input[type=tel] {
           align-items: center; }
 
 .stop__item {
-  margin: 0 auto;
-  margin: 5px;
   padding: 0;
   padding-top: 20px;
-  width: 308px;
   height: 280px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1770,7 +1768,12 @@ input[type=tel] {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  border: 1px solid #eaeaea; }
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border: 1px solid #eaeaea;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
   .stop__item a {
     text-decoration: none;
     display: -webkit-box;
@@ -1803,7 +1806,7 @@ input[type=tel] {
 
 .stop__name {
   padding: 0;
-  margin-bottom: 14px;
+  margin: 0;
   color: #252525;
   font-family: "PlayfairDisplayRegular", Arial, sans-serif;
   font-size: 20px;
@@ -2064,7 +2067,7 @@ input[type=tel] {
       width: 222px; }
     .footer {
       padding-top: 320px;
-      background-image: url("../../img/bg_footer_tablet.jpg");
+      background-image: url("../img/bg_footer_tablet.jpg");
       min-height: 800px; }
     .footer__caption {
       margin-bottom: 20px;
@@ -2075,7 +2078,7 @@ input[type=tel] {
       letter-spacing: 0.4px;
       font-weight: 700; }
     .header {
-      background-image: url("../../img/bg_main_tablet.jpg"); }
+      background-image: url("../img/bg_main_tablet.jpg"); }
     .header__content {
       max-width: 768px;
       padding-left: 40px;
@@ -2095,7 +2098,7 @@ input[type=tel] {
       font-weight: 500; }
     .lifehack {
       height: 1288px;
-      background-image: url("../../img/bg_lifehack_tablet.jpg"); }
+      background-image: url("../img/bg_lifehack_tablet.jpg"); }
     .lifehack__caption {
       margin-bottom: 30px;
       width: 450px;
@@ -2205,8 +2208,8 @@ input[type=tel] {
       display: flex;
       -webkit-box-orient: vertical;
       -webkit-box-direction: normal;
-          -ms-flex-flow: column;
-              flex-flow: column;
+          -ms-flex-direction: column;
+              flex-direction: column;
       -webkit-box-align: center;
           -ms-flex-align: center;
               align-items: center;
@@ -2231,10 +2234,12 @@ input[type=tel] {
         -ms-flex-align: center;
             align-items: center; }
     .stop__container {
-      display: block;
       width: 338px; }
     .stop__item {
-      width: 338px; }
+      height: 300px;
+      margin-bottom: 10px; }
+    .stop__image-cover picture {
+      height: 216px; }
     .transport {
       max-width: 768px;
       padding-left: 40px;
@@ -2249,15 +2254,15 @@ input[type=tel] {
       font-weight: 400; }
     .transport__container {
       padding: 40px 40px;
-      background-image: url("../../img/svg-sprite/icon-traffic.svg");
+      background-image: url("../img/svg-sprite/icon-traffic.svg");
       background-repeat: no-repeat;
       background-position: top 30px right 30px; }
       .transport__container--train {
-        background-image: url("../../img/svg-sprite/icon-subway.svg"); }
+        background-image: url("../img/svg-sprite/icon-subway.svg"); }
       .transport__container--helicopter {
-        background-image: url("../../img/svg-sprite/icon-helicopter.svg"); }
+        background-image: url("../img/svg-sprite/icon-helicopter.svg"); }
       .transport__container--taxi {
-        background-image: url("../../img/svg-sprite/icon-taxi.svg"); }
+        background-image: url("../img/svg-sprite/icon-taxi.svg"); }
     .transport__plan-item {
       line-height: 30px; } }
 
@@ -2286,7 +2291,7 @@ input[type=tel] {
       width: 350px; }
     .footer {
       padding-top: 320px;
-      background-image: url("../../img/bg_footer.jpg");
+      background-image: url("../img/bg_footer.jpg");
       background-size: cover; }
     .footer__caption {
       margin-bottom: 40px;
@@ -2297,7 +2302,7 @@ input[type=tel] {
       letter-spacing: 0.4px;
       font-weight: 700; }
     .header {
-      background-image: url("../../img/bg_main.jpg"); }
+      background-image: url("../img/bg_main.jpg"); }
     .header__content {
       max-width: 1190px;
       padding-left: 0;
@@ -2319,7 +2324,7 @@ input[type=tel] {
       width: 1190px; }
     .lifehack {
       height: 1388px;
-      background-image: url("../../img/bg_lifehack.jpg"); }
+      background-image: url("../img/bg_lifehack.jpg"); }
     .lifehack__caption {
       width: 730px; }
   .lifehack__slider {
@@ -2362,16 +2367,15 @@ input[type=tel] {
       padding-left: 0;
       padding-right: 0; }
     .stop {
-      margin-bottom: 28px;
-      width: 1190px; }
+      margin-bottom: 28px; }
     .stop__caption {
       font-size: 45px;
       line-height: 53px;
       margin-bottom: 48px; }
+    .stop__container {
+      width: 390px; }
     .stop__item {
-      width: 390px;
-      height: 340px;
-      margin-bottom: 10px; }
+      height: 340px; }
     .stop__image-cover picture {
       overflow: hidden; }
     .transport {

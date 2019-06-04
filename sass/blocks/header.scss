@@ -3,18 +3,18 @@
   min-height: 580px;
   padding-bottom: 50px;
   background-color: $bg-gray;
-  background-image: url('../../img/bg_main_mobile.jpg');
+  background-image: url('../img/bg_main_mobile.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
   overflow: hidden;
 
   @include tablet {
-    background-image: url('../../img/bg_main_tablet.jpg');
+    background-image: url('../img/bg_main_tablet.jpg');
   }
 
   @include desktop {
-    background-image: url('../../img/bg_main.jpg');
+    background-image: url('../img/bg_main.jpg');
   }
 }
 
@@ -49,12 +49,12 @@
 
   &--ostrovok {
     margin-top: 13px;
-    background-image: url('../../img/ostrovok-logo.svg');
+    background-image: url('../img/ostrovok-logo.svg');
     background-size: 162px 20px;
   }
   &--monaco {
     width: 96px;
-    background-image: url('../../img/monako-visit-logo.svg');
+    background-image: url('../img/monako-visit-logo.svg');
     background-size: 96px 30px;
   }
 }

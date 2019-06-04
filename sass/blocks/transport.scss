@@ -42,20 +42,20 @@
 
   @include tablet {
     padding: 40px 40px;
-    background-image: url("../../img/svg-sprite/icon-traffic.svg");
+    background-image: url("../img/svg-sprite/icon-traffic.svg");
     background-repeat: no-repeat;
     background-position: top 30px right 30px;
 
     &--train {
-      background-image: url("../../img/svg-sprite/icon-subway.svg");
+      background-image: url("../img/svg-sprite/icon-subway.svg");
     }
 
     &--helicopter {
-      background-image: url("../../img/svg-sprite/icon-helicopter.svg");
+      background-image: url("../img/svg-sprite/icon-helicopter.svg");
     }
 
     &--taxi {
-      background-image: url("../../img/svg-sprite/icon-taxi.svg");
+      background-image: url("../img/svg-sprite/icon-taxi.svg");
     }
   }
 

@@ -22,6 +22,7 @@
 .scroll__text {
   color: $white;
   @include font-medium(13px, 15px);
+  text-align: center;
 }
 
 .scroll__btn {

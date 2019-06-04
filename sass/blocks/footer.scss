@@ -3,7 +3,7 @@
   height: 580px;
   padding-top: 136px;
   background-color: $bg-gray;
-  background-image: url('../../img/bg_footer_mobile.jpg');
+  background-image: url('../img/bg_footer_mobile.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
@@ -11,13 +11,13 @@
 
   @include tablet {
     padding-top: 320px;
-    background-image: url('../../img/bg_footer_tablet.jpg');
+    background-image: url('../img/bg_footer_tablet.jpg');
     min-height: 800px;
   }
 
   @include desktop {
     padding-top: 320px;
-    background-image: url('../../img/bg_footer.jpg');
+    background-image: url('../img/bg_footer.jpg');
     background-size: cover;
   }
 }

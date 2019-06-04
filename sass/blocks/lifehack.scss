@@ -1,7 +1,7 @@
 .lifehack {
   height: 928px;
   background-color: $white;
-  background-image: url('../../img/bg_lifehack_mobile.jpg');
+  background-image: url('../img/bg_lifehack_mobile.jpg');
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center bottom;
@@ -9,12 +9,12 @@
 
   @include tablet {
     height: 1288px;
-    background-image: url('../../img/bg_lifehack_tablet.jpg');
+    background-image: url('../img/bg_lifehack_tablet.jpg');
   }
 
   @include desktop {
     height: 1388px;
-    background-image: url('../../img/bg_lifehack.jpg');
+    background-image: url('../img/bg_lifehack.jpg');
   }
 }
 

@@ -8,7 +8,6 @@
 css/*.css
 node_modules/
 design/
-build/
 npm-debug.*
 .publish
 Thumbs.db

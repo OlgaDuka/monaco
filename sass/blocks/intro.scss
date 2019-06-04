@@ -1,5 +1,8 @@
 .intro {
-  @include container();
+  margin: 0 auto;
+  @include desktop {
+    width: $desktop-content-width;
+  }
 }
 
 .intro__description {

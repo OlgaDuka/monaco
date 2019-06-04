@@ -19,7 +19,7 @@
 }
 
 .header__content {
-
+  @include container();
 }
 
 .header__top {
@@ -30,16 +30,22 @@
 
 .header__logo-wrapper {
   margin-top: 10px;
+  width: 100%;
   height: 30px;
   display: flex;
   justify-content: space-around;
+
+  @include desktop {
+    width: 100%;
+    justify-content: space-between;
+  }
 }
 
 .header__logo {
   width: 162px;
   height: 30px;
   background-repeat: no-repeat;
-
+  cursor: pointer;
 
   &--ostrovok {
     margin-top: 13px;
@@ -47,11 +53,11 @@
     background-size: 162px 20px;
   }
   &--monaco {
+    width: 96px;
     background-image: url('../../img/monako-visit-logo.svg');
     background-size: 96px 30px;
   }
 }
-
 
 .header__title {
   color: $white;
@@ -59,30 +65,31 @@
   font-weight: 900;
   text-align: center;
   text-transform: uppercase;
+
+  @include tablet {
+    @include second-font-bold(140px, 187px);
+  }
+
+  @include desktop {
+    @include second-font-bold(200px, 267px);
+  }
 }
 
 .header__caption {
   color: $white;
   @include font-medium(18px, 21px, 1.3px);
   text-align: center;
-}
-
-.header__search {
-
-}
-
-.header__scroll-down {
-  display: none;
 
   @include tablet {
-    display: flex;
+    margin-bottom: 15px;
+    @include font-medium(30px, 36px);
+  }
+
+  @include desktop {
+    margin-bottom: 40px;
   }
 }
 
-.header__text {
-
-}
-
-.header__btn {
+.header__search {
 
 }

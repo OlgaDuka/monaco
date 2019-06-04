@@ -1,6 +1,21 @@
 .lifehack {
-  @include container();
-  background-image: url('https://of.worldota.net/travel/monaco_project/static/img/ostrovok-logo.svg');
+  height: 928px;
+  background-color: $white;
+  background-image: url('../../img/bg_lifehack_mobile.jpg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center bottom;
+  overflow: hidden;
+
+  @include tablet {
+    height: 1288px;
+    background-image: url('../../img/bg_lifehack_tablet.jpg');
+  }
+
+  @include desktop {
+    height: 1388px;
+    background-image: url('../../img/bg_lifehack.jpg');
+  }
 }
 
 .lifehack__caption {
@@ -26,6 +41,8 @@
 }
 
 .lifehack__slider {
+
+
   @include tablet {
     display: flex;
     flex-direction: column;
@@ -33,6 +50,8 @@
   }
 
   @include desktop {
+    margin: 0 auto;
+    width: $desktop-content-width;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
@@ -47,6 +66,7 @@
   padding-top: 26px;
 
   @include tablet {
+    margin-bottom: 0;
     flex-flow: column;
     align-items: center;
     padding: 0;

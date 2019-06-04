@@ -1,0 +1,24 @@
+.menu {
+  display: none;
+
+  @include desktop {
+    display: block;
+  }
+}
+
+.menu__list {
+  width: 635px;
+  height: 18px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu__item {
+
+}
+
+.menu__link {
+  @include font_medium(15px, 18px);
+  @include underline-appear-hover (1px, 0, $white, $white);
+}

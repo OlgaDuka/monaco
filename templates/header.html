@@ -2,11 +2,16 @@
   <div class="header__content">
     <div class="header__top">
       <div class="header__logo-wrapper">
-        <div class="header__logo header__logo--ostrovok"></div>
-        <menu class="header__menu">
-
+        <a href="https://ostrovok.ru/" class="header__logo header__logo--ostrovok"></a>
+        <menu class="header__menu menu">
+          <ul class="menu__list">
+            <li class="menu__item"><a href="#details" class="menu__link">Неповторимые детали</a></li>
+            <li class="menu__item"><a href="#transport" class="menu__link">Как добраться</a></li>
+            <li class="menu__item"><a href="#stop" class="menu__link">Где остановиться</a></li>
+            <li class="menu__item"><a href="#better" class="menu__link">Лучшие места</a></li>
+          </ul>
         </menu>
-        <div class="header__logo header__logo--monaco"></div>
+        <a href="https://www.visitmonaco.com/ru" class="header__logo header__logo--monaco"></a>
       </div>
       <h1 class="header__title">Монако</h1>
       <h2 class="header__caption">Почувствуй роскошь момента</h2>
@@ -14,10 +19,14 @@
     <div class="header__search">
       //= search.html
     </div>
-    <div class="header__scroll-down">
-      <p class="header__text">Чтобы узнать больше о Монако</p>
-      <p class="header__text">прокрутите вниз</p>
-      <button class="header__btn"></button>
+    <div class="header__scroll scroll">
+      <p class="scroll__text">Чтобы узнать больше о Монако</p>
+      <p class="scroll__text">прокрутите вниз</p>
+      <button class="scroll__btn">
+        <svg class="scroll__icon" width="18" height="24">
+          <use xlink:href="#icon-scroll-down"></use>
+        </svg>
+      </button>
     </div>
   </div>
 </header>

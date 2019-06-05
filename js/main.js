@@ -1,5 +1,16 @@
 "use strict";
 
+// Функция переключения разделов
+//function toggleSectionBetterPlace() {
+//  var selector = $(this).val();
+//  $('.version.current').find('.version__toggle').each(function (i, el) {
+//    $('.version__toggle').toggleClass('version__toggle--active');
+//  });
+// Получаем заголовок и "обещание" для выбранной целевой аудитории
+//  var title = $(this).data().title;
+//  var promise = $(this).data().promise;
+//  viewComplectation(selector, title, promise);
+//};
 // Формируем формы заказы
 var headerFormSelect = '.header__search';
 var footerFormSelect = '.footer__search';
@@ -282,4 +293,91 @@ $('.stop__slider').slick({
     breakpoint: TABLET_WIDTH,
     settings: 'unslick'
   }]
+});
+$('.details__slider-for').slick({
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  initialSlide: 3,
+  centerMode: true,
+  arrows: false,
+  asNavFor: '.details__slider-nav',
+  mobileFirst: true,
+  responsive: [{
+    breakpoint: TABLET_WIDTH,
+    slidesToShow: 3
+  }]
+});
+$('.details__slider-nav').slick({
+  slidesToShow: 4,
+  slidesToScroll: 1,
+  initialSlide: 3,
+  asNavFor: '.details__slider-for',
+  dots: true,
+  centerMode: true,
+  focusOnSelect: true,
+  mobileFirst: true,
+  responsive: [{
+    breakpoint: TABLET_WIDTH,
+    slidesToShow: 6
+  }]
+}); // Параметры слайдеров достопримечательностей
+
+var setSlickParameters = function setSlickParameters(arrowPrev, arrowNext) {
+  var slickParameters = {
+    mobileFirst: true,
+    infinite: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    dots: false,
+    //arrows: !0,
+    prevArrow: $(arrowPrev),
+    nextArrow: $(arrowNext),
+    responsive: [{
+      breakpoint: TABLET_WIDTH,
+      settings: {
+        centerMode: false
+      }
+    }, {
+      breakpoint: DESKTOP_WIDTH,
+      settings: {
+        slidesToShow: 1
+      }
+    }]
+  };
+  return slickParameters;
+};
+
+var better1 = setSlickParameters('.better__arrow--prev1', '.better__arrow--next1');
+var better2 = setSlickParameters('.better__arrow--prev2', '.better__arrow--next2');
+var better3 = setSlickParameters('.better__arrow--prev3', '.better__arrow--next3');
+var better4 = setSlickParameters('.better__arrow--prev4', '.better__arrow--next4');
+$('.better__slider--1').slick(better1);
+$('.better__slider--2').slick(better2);
+$('.better__slider--3').slick(better3);
+$('.better__slider--4').slick(better4);
+var menu = document.querySelector('.better__menu');
+var betterMenuItems = menu.querySelectorAll('.better__menu-item');
+var betterSliders = document.querySelectorAll('.better__slider');
+$('.better__menu-item').click(function (evt) {
+  if ($(this).hasClass('better__menu-item--active')) {
+    return;
+  } else {
+    var selector = $(this).data().num;
+    var targetSlider = $('.better__slider[data-num="' + selector + '"]'); // Селект нужного блока
+
+    var targetControl = $('.better__controls[data-num="' + selector + '"]');
+    $('.better__slider').each(function (i, el) {
+      $(el).removeClass('better__slider--active');
+    });
+    $('.better__controls').each(function (i, el) {
+      $(el).removeClass('better__controls--active');
+    });
+    $('.better__menu-item').each(function (i, el) {
+      $(el).removeClass('better__menu-item--active');
+    });
+    $(this).addClass('better__menu-item--active');
+    targetSlider.addClass('better__slider--active');
+    targetControl.addClass('better__controls--active');
+    targetSlider.slick('refresh');
+  }
 });

@@ -73,22 +73,22 @@ $('.details__slider-for').slick({
   ]
 });
 
-$('.details__slider-nav').slick({
-  slidesToShow: 4,
-  slidesToScroll: 1,
-  initialSlide:3,
-  asNavFor: '.details__slider-for',
-  dots: true,
-  centerMode: true,
-  focusOnSelect: true,
-  mobileFirst: true,
-  responsive: [
-    {
-      breakpoint: TABLET_WIDTH,
-      slidesToShow: 6
-    }
-  ]
-});
+//$('.details__slider-nav').slick({
+//  slidesToShow: 4,
+//  slidesToScroll: 1,
+//  initialSlide:3,
+//  asNavFor: '.details__slider-for',
+//  dots: true,
+//  centerMode: true,
+//  focusOnSelect: true,
+//  mobileFirst: true,
+//  responsive: [
+//    {
+//      breakpoint: TABLET_WIDTH,
+//      slidesToShow: 6
+//    }
+//  ]
+//});
 
 // Параметры слайдеров достопримечательностей
 const setSlickParameters = function(arrowPrev, arrowNext) {

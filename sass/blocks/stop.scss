@@ -13,6 +13,10 @@
   @include desktop {
     margin-bottom: 28px;
   }
+
+  @include desktop-max {
+    margin-bottom: 70px;
+  }
 }
 
 .stop__caption {

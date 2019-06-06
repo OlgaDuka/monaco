@@ -1,8 +1,16 @@
 .transport {
   @include container();
 
+  @include tablet {
+    margin-bottom: 180px;
+  }
+
   @include desktop {
     width: $desktop-content-width;
+  }
+
+  @include desktop-max {
+    margin-bottom: 180px;
   }
 }
 

@@ -3,6 +3,10 @@
   display: flex;
   flex-flow: column;
   align-items: center;
+
+  @include desktop-max {
+    margin-bottom: 120px;
+  }
 }
 
 .better__caption {

@@ -1,16 +1,5 @@
 "use strict";
 
-// Функция переключения разделов
-//function toggleSectionBetterPlace() {
-//  var selector = $(this).val();
-//  $('.version.current').find('.version__toggle').each(function (i, el) {
-//    $('.version__toggle').toggleClass('version__toggle--active');
-//  });
-// Получаем заголовок и "обещание" для выбранной целевой аудитории
-//  var title = $(this).data().title;
-//  var promise = $(this).data().promise;
-//  viewComplectation(selector, title, promise);
-//};
 // Формируем формы заказы
 var headerFormSelect = '.header__search';
 var footerFormSelect = '.footer__search';
@@ -230,6 +219,31 @@ function makeForm(selection) {
   });
 }
 
+var tabletWidth = window.matchMedia("(min-width: 768px)");
+var desktopWidth = window.matchMedia("(min-width: 1200px)");
+var desktopWidthMax = window.matchMedia("(min-width: 1920px)");
+var limitImages = 9;
+
+if (desktopWidthMax.matches) {
+  limitImages = 16;
+} else if (desktopWidth.matches) {
+  limitImages = 12;
+} else if (tabletWidth.matches) {
+  limitImages = 10;
+} else {
+  limitImages = 9;
+}
+
+var feed = new Instafeed({
+  get: 'user',
+  userId: 14110486070,
+  accessToken: '14110486070.1677ed0.e29f390d542548cc9d383954ff2b2f3a',
+  target: 'Instafeed',
+  resolution: 'thumbnail',
+  limit: limitImages,
+  template: '<li><img src="{{image}}" /></a></li>'
+});
+feed.run();
 var limit = $(window).height() / 4;
 var backToTop = $('#up-btn'); // Appearing and disappearing of the 'up' button on the first screen
 // and fixed menu on top screen

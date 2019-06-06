@@ -12,6 +12,10 @@
     padding-top: 38px;
     min-height: 302px;
   }
+
+  @include desktop-max {
+    margin-bottom: 120px;
+  }
 }
 
 .advantages__slider {

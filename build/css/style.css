@@ -1583,7 +1583,9 @@ input[type=tel] {
 
 .instagram {
   width: 100%;
-  margin-bottom: 100px; }
+  height: 420px;
+  margin-bottom: 100px;
+  overflow: hidden; }
 
 .instagram__wrap {
   margin-bottom: 15px;
@@ -2510,9 +2512,8 @@ input[type=tel] {
       letter-spacing: 0.4px;
       font-weight: 500; }
     .instagram {
-      height: 570px;
-      position: relative;
-      overflow: hidden; }
+      height: 565px;
+      position: relative; }
     .instagram__wrap {
       margin-left: 40px; }
     .instagram__collage {
@@ -2850,8 +2851,7 @@ input[type=tel] {
       margin-bottom: 40px; }
     .instagram {
       margin-bottom: 120px;
-      height: 720px;
-      overflow: hidden; }
+      height: 720px; }
     .instagram__wrap {
       margin: 0 auto;
       width: 1190px; }

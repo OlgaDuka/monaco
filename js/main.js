@@ -218,21 +218,22 @@ function makeForm(selection) {
     // console.log(compareString)
   });
 }
+/*const tabletWidth = window.matchMedia("(min-width: 768px)");
+const desktopWidth = window.matchMedia("(min-width: 1200px)");
+const desktopWidthMax = window.matchMedia("(min-width: 1920px)");
 
-var tabletWidth = window.matchMedia("(min-width: 768px)");
-var desktopWidth = window.matchMedia("(min-width: 1200px)");
-var desktopWidthMax = window.matchMedia("(min-width: 1920px)");
-var limitImages = 9;
+let limitImages = 9;
 
 if (desktopWidthMax.matches) {
-  limitImages = 16;
-} else if (desktopWidth.matches) {
-  limitImages = 12;
-} else if (tabletWidth.matches) {
-  limitImages = 10;
-} else {
-  limitImages = 9;
-}
+    limitImages = 16;
+  } else if (desktopWidth.matches) {
+    limitImages = 12;
+  } else if (tabletWidth.matches) {
+    limitImages = 10;
+  } else {
+    limitImages = 9;
+  } */
+
 
 var feed = new Instafeed({
   get: 'user',
@@ -240,8 +241,8 @@ var feed = new Instafeed({
   accessToken: '14110486070.1677ed0.e29f390d542548cc9d383954ff2b2f3a',
   target: 'Instafeed',
   resolution: 'thumbnail',
-  limit: limitImages,
-  template: '<li><img src="{{image}}" /></a></li>'
+  limit: 22,
+  template: '<li><img src="{{image}}" /></li>'
 });
 feed.run();
 var limit = $(window).height() / 4;

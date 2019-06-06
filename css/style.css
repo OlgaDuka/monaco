@@ -1581,6 +1581,45 @@ input[type=tel] {
   font-weight: 500;
   text-align: center; }
 
+.instagram {
+  width: 100%;
+  margin-bottom: 100px; }
+
+.instagram__wrap {
+  margin-bottom: 15px;
+  padding-left: 110px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-image: url("../img/insta.jpg");
+  background-repeat: no-repeat;
+  background-position: left 15px center; }
+
+.instagram__caption {
+  margin: 0;
+  color: #878787;
+  font-family: "RubikRegular", Arial, sans-serif;
+  font-size: 14px;
+  line-height: 35px;
+  letter-spacing: 0.3px;
+  font-weight: 400; }
+
+.instagram__collage {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: wrap;
+      flex-flow: wrap; }
+  .instagram__collage li {
+    margin: 5px; }
+    .instagram__collage li img {
+      width: 96px;
+      height: 96px; }
+
 .intro {
   margin: 0 auto; }
 
@@ -2470,6 +2509,23 @@ input[type=tel] {
       line-height: 36px;
       letter-spacing: 0.4px;
       font-weight: 500; }
+    .instagram {
+      height: 570px;
+      position: relative;
+      overflow: hidden; }
+    .instagram__wrap {
+      margin-left: 40px; }
+    .instagram__collage {
+      position: absolute;
+      top: 100px;
+      left: 50%;
+      -webkit-transform: translateX(-50%);
+              transform: translateX(-50%);
+      width: 1190px;
+      overflow: hidden; }
+      .instagram__collage li img {
+        width: 222px;
+        height: 222px; }
     .lifehack {
       height: 1288px;
       background-image: url("../img/bg_lifehack_tablet.jpg"); }
@@ -2618,6 +2674,8 @@ input[type=tel] {
       max-width: 768px;
       padding-left: 40px;
       padding-right: 40px; }
+    .transport {
+      margin-bottom: 180px; }
     .transport__caption {
       margin-bottom: 30px;
       width: 350px;
@@ -2790,6 +2848,19 @@ input[type=tel] {
       font-weight: 700; }
     .header__caption {
       margin-bottom: 40px; }
+    .instagram {
+      margin-bottom: 120px;
+      height: 720px;
+      overflow: hidden; }
+    .instagram__wrap {
+      margin: 0 auto;
+      width: 1190px; }
+    .instagram__collage {
+      top: 120px;
+      width: 1920px; }
+      .instagram__collage li img {
+        width: 290px;
+        height: 290px; }
     .intro {
       width: 1190px; }
     .lifehack {
@@ -2905,6 +2976,16 @@ input[type=tel] {
       width: 1920px;
       padding-left: 0;
       padding-right: 0; } }
+
+@media (min-width: 1921px) {
+    .advantages {
+      margin-bottom: 120px; }
+    .better {
+      margin-bottom: 120px; }
+    .stop {
+      margin-bottom: 70px; }
+    .transport {
+      margin-bottom: 180px; } }
 
 @media print {
   .datepickers-container {

@@ -1,66 +1,165 @@
-<!-- Первый -->
 <section class="details" id="details">
   <h2 class="details__caption">Неповторимые <span>детали</span></h2>
+
+  <div class="details__slider-nav">
+    <div class="details__container">
+      <div class="details__item-mini">
+        <picture>
+          <img class="details_image-mini" data-object-fit="cover" src="img/detail_mini0.jpg" alt="Порт" srcset="img/detail_mini0@2x.jpg 2x, img/detail_mini0@3x.jpg 3x">
+        </picture>
+      </div>
+    </div>
+    <div class="details__container">
+      <div class="details__item-mini">
+        <picture>
+          <img class="details_image-mini" data-object-fit="cover" src="img/detail_mini1.jpg" alt="Порт" srcset="img/detail_mini1@2x.jpg 2x, img/detail_mini1@3x.jpg 3x">
+        </picture>
+      </div>
+    </div>
+    <div class="details__container">
+      <div class="details__item-mini">
+        <picture>
+          <img class="details_image-mini" data-object-fit="cover" src="img/detail_mini2.jpg" alt="Порт" srcset="img/detail_mini2@2x.jpg 2x, img/detail_mini2@3x.jpg 3x">
+        </picture>
+      </div>
+    </div>
+    <div class="details__container">
+      <div class="details__item-mini">
+        <picture>
+          <img class="details_image-mini" data-object-fit="cover" src="img/detail_mini3.jpg" alt="Порт" srcset="img/detail_mini3@2x.jpg 2x, img/detail_mini3@3x.jpg 3x">
+        </picture>
+      </div>
+    </div>
+    <div class="details__container">
+      <div class="details__item-mini">
+        <picture>
+          <img class="details_image-mini" data-object-fit="cover" src="img/detail_mini4.jpg" alt="Порт" srcset="img/detail_mini4@2x.jpg 2x, img/detail_mini4@3x.jpg 3x">
+        </picture>
+      </div>
+    </div>
+    <div class="details__container">
+      <div class="details__item-mini">
+        <picture>
+          <img class="detail_image-mini" data-object-fit="cover" src="img/detail_mini5.jpg" alt="Порт" srcset="img/detail_mini5@2x.jpg 2x, img/detail_mini5@3x.jpg 3x">
+        </picture>
+      </div>
+    </div>
+  </div>
+
   <div class="details__slider-for">
     <div class="details__container">
       <div class="details__item">
-        <picture>
-          <source media="(min-width: 1200px)" srcset="img/detail0_desktop.jpg 1x, img/detail0_desktop@2x.jpg 2x, img/detail0_desktop@3x.jpg 3x">
-          <source media="(min-width: 768px)" srcset="img/detail0_tablet.jpg 1x, img/detail0_tablet@2x.jpg 2x, img/detail0_tablet@3x.jpg 3x">
-          <img class="slider__image" data-object-fit="cover" src="img/detail0.jpg" alt="Порт" srcset="img/detail0@2x.jpg 2x, img/detail0@3x.jpg 3x">
-        </picture>
+        <figure class="details__picture">
+          <picture>
+            <source media="(min-width: 1200px)" srcset="img/detail0_desktop.jpg 1x, img/detail0_desktop@2x.jpg 2x, img/detail0_desktop@3x.jpg 3x">
+            <source media="(min-width: 768px)" srcset="img/detail0_tablet.jpg 1x, img/detail0_tablet@2x.jpg 2x, img/detail0_tablet@3x.jpg 3x">
+            <img class="details_image" data-object-fit="cover" src="img/detail0.jpg" alt="Порт" srcset="img/detail0@2x.jpg 2x, img/detail0@3x.jpg 3x">
+          </picture>
+          <figcaption class="details__legend">
+            <svg class="details__icon" width="18" height="25">
+              <use xlink:href="#icon-geo"></use>
+            </svg>
+            <p class="details__text">Название страны произошло от слова Monoikos — «порт одинокого Геракла».</p>
+          </figcaption>
+        </figure>
       </div>
     </div>
     <div class="details__container">
       <div class="details__item">
-        <picture>
-          <source media="(min-width: 1200px)" srcset="img/detail1_desktop.jpg 1x, img/detail1_desktop@2x.jpg 2x, img/detail1_desktop@3x.jpg 3x">
-          <source media="(min-width: 768px)" srcset="img/detail1_tablet.jpg 1x, img/detail1_tablet@2x.jpg 2x, img/detail1_tablet@3x.jpg 3x">
-          <img class="slider__image" data-object-fit="cover" src="img/detail1.jpg" alt="Порт" srcset="img/detail1@2x.jpg 2x, img/detail1@3x.jpg 3x">
-        </picture>
+        <figure class="details__picture">
+          <picture>
+            <source media="(min-width: 1200px)" srcset="img/detail1_desktop.jpg 1x, img/detail1_desktop@2x.jpg 2x, img/detail1_desktop@3x.jpg 3x">
+            <source media="(min-width: 768px)" srcset="img/detail1_tablet.jpg 1x, img/detail1_tablet@2x.jpg 2x, img/detail1_tablet@3x.jpg 3x">
+            <img class="details_image" data-object-fit="cover" src="img/detail1.jpg" alt="Порт" srcset="img/detail1@2x.jpg 2x, img/detail1@3x.jpg 3x">
+          </picture>
+          <figcaption class="details__legend">
+            <svg class="details__icon" width="25" height="25">
+              <use xlink:href="#icon-geracle"></use>
+            </svg>
+            <p class="details__text">По легенде Геракл принимал участие в постройке Монако.</p>
+          </figcaption>
+        </figure>
       </div>
     </div>
     <div class="details__container">
       <div class="details__item">
-        <picture>
-          <source media="(min-width: 1200px)" srcset="img/detail2_desktop.jpg 1x, img/detail2_desktop@2x.jpg 2x, img/detail2_desktop@3x.jpg 3x">
-          <source media="(min-width: 768px)" srcset="img/detail2_tablet.jpg 1x, img/detail2_tablet@2x.jpg 2x, img/detail2_tablet@3x.jpg 3x">
-          <img class="slider__image" data-object-fit="cover" src="img/detail2.jpg" alt="Порт" srcset="img/detail2@2x.jpg 2x, img/detail2@3x.jpg 3x">
-        </picture>
+        <figure class="details__picture">
+          <picture>
+            <source media="(min-width: 1200px)" srcset="img/detail2_desktop.jpg 1x, img/detail2_desktop@2x.jpg 2x, img/detail2_desktop@3x.jpg 3x">
+            <source media="(min-width: 768px)" srcset="img/detail2_tablet.jpg 1x, img/detail2_tablet@2x.jpg 2x, img/detail2_tablet@3x.jpg 3x">
+            <img class="details_image" data-object-fit="cover" src="img/detail2.jpg" alt="Порт" srcset="img/detail2@2x.jpg 2x, img/detail2@3x.jpg 3x">
+          </picture>
+          <figcaption class="details__legend">
+            <div class="details__icons">
+              <div class="details__value">
+                <svg class="details__icon-value" width="26" height="26">
+                  <use xlink:href="#icon-sun2"></use>
+                </svg>
+                <span>+25</span>
+              </div>
+              <div class="details__value">
+                <svg class="details__icon-value" width="16" height="26">
+                  <use xlink:href="#icon-pin"></use>
+                </svg>
+                <span>2км</span>
+              </div>
+            </div>
+            <p class="details__text">Площадь Княжества всего 2 км² — сможешь обойти всё государство за несколько часов.</p>
+          </figcaption>
+        </figure>
       </div>
     </div>
     <div class="details__container">
       <div class="details__item">
-        <picture>
-          <source media="(min-width: 1200px)" srcset="img/detail3_desktop.jpg 1x, img/detail3_desktop@2x.jpg 2x, img/detail3_desktop@3x.jpg 3x">
-          <source media="(min-width: 768px)" srcset="img/detail3_tablet.jpg 1x, img/detail3_tablet@2x.jpg 2x, img/detail3_tablet@3x.jpg 3x">
-          <img class="slider__image" data-object-fit="cover" src="img/detail3.jpg" alt="Порт" srcset="img/detail3@2x.jpg 2x, img/detail3@3x.jpg 3x">
-        </picture>
+        <figure class="details__picture">
+          <picture>
+            <source media="(min-width: 1200px)" srcset="img/detail3_desktop.jpg 1x, img/detail3_desktop@2x.jpg 2x, img/detail3_desktop@3x.jpg 3x">
+            <source media="(min-width: 768px)" srcset="img/detail3_tablet.jpg 1x, img/detail3_tablet@2x.jpg 2x, img/detail3_tablet@3x.jpg 3x">
+            <img class="details_image" data-object-fit="cover" src="img/detail3.jpg" alt="Порт" srcset="img/detail3@2x.jpg 2x, img/detail3@3x.jpg 3x">
+          </picture>
+          <figcaption class="details__legend">
+            <svg class="details__icon" width="40" height="40">
+              <use xlink:href="#icon-train1"></use>
+            </svg>
+            <p class="details__text">Вокзал и большая часть железной дороги находится под землёй.</p>
+          </figcaption>
+        </figure>
       </div>
     </div>
     <div class="details__container">
       <div class="details__item">
-        <picture>
-          <source media="(min-width: 1200px)" srcset="img/detail4_desktop.jpg 1x, img/detail4_desktop@2x.jpg 2x, img/detail4_desktop@3x.jpg 3x">
-          <source media="(min-width: 768px)" srcset="img/detail4_tablet.jpg 1x, img/detail4_tablet@2x.jpg 2x, img/detail4_tablet@3x.jpg 3x">
-          <img class="slider__image" data-object-fit="cover" src="img/detail4.jpg" alt="Порт" srcset="img/detail4@2x.jpg 2x, img/detail4@3x.jpg 3x">
-        </picture>
+        <figure class="details__picture">
+          <picture>
+            <source media="(min-width: 1200px)" srcset="img/detail4_desktop.jpg 1x, img/detail4_desktop@2x.jpg 2x, img/detail4_desktop@3x.jpg 3x">
+            <source media="(min-width: 768px)" srcset="img/detail4_tablet.jpg 1x, img/detail4_tablet@2x.jpg 2x, img/detail4_tablet@3x.jpg 3x">
+            <img class="details_image" data-object-fit="cover" src="img/detail4.jpg" alt="Порт" srcset="img/detail4@2x.jpg 2x, img/detail4@3x.jpg 3x">
+          </picture>
+          <figcaption class="details__legend">
+            <svg class="details__icon" width="55" height="40">
+              <use xlink:href="#icon-king-crown-white"></use>
+            </svg>
+            <p class="details__text">Династия Гримальди правит государством с XIII века — уже больше 700 лет.</p>
+          </figcaption>
+        </figure>
       </div>
     </div>
     <div class="details__container">
       <div class="details__item">
-        <picture>
-          <source media="(min-width: 1200px)" srcset="img/detail5_desktop.jpg 1x, img/detail5_desktop@2x.jpg 2x, img/detail5_desktop@3x.jpg 3x">
-          <source media="(min-width: 768px)" srcset="img/detail5_tablet.jpg 1x, img/detail5_tablet@2x.jpg 2x, img/detail5_tablet@3x.jpg 3x">
-          <img class="slider__image" data-object-fit="cover" src="img/detail5.jpg" alt="Порт" srcset="img/detail5@2x.jpg 2x, img/detail5@3x.jpg 3x">
-        </picture>
+        <figure class="details__picture">
+          <picture>
+            <source media="(min-width: 1200px)" srcset="img/detail5_desktop.jpg 1x, img/detail5_desktop@2x.jpg 2x, img/detail5_desktop@3x.jpg 3x">
+            <source media="(min-width: 768px)" srcset="img/detail5_tablet.jpg 1x, img/detail5_tablet@2x.jpg 2x, img/detail5_tablet@3x.jpg 3x">
+            <img class="details_image" data-object-fit="cover" src="img/detail5.jpg" alt="Порт" srcset="img/detail5@2x.jpg 2x, img/detail5@3x.jpg 3x">
+          </picture>
+          <figcaption class="details__legend">
+            <svg class="details__icon" width="43" height="40">
+              <use xlink:href="#icon-submarine"></use>
+            </svg>
+            <p class="details__text">У музея океанографии стоит желтая субмарина, на которой великий Кусто изучал морские глубины.</p>
+          </figcaption>
+        </figure>
       </div>
     </div>
+  </div>
 
-  </div>
-  <div class="details__navigation">
-    <button class="details__prev"></button>
-    <span class="details__position">1/3</span>
-    <button class="details__next"></button>
-  </div>
 </section>

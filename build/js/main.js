@@ -297,32 +297,38 @@ $('.stop__slider').slick({
 $('.details__slider-for').slick({
   slidesToShow: 1,
   slidesToScroll: 1,
-  initialSlide: 3,
-  centerMode: true,
+  initialSlide: 2,
+  centerMode: false,
+  dots: true,
   arrows: false,
   asNavFor: '.details__slider-nav',
   mobileFirst: true,
   responsive: [{
     breakpoint: TABLET_WIDTH,
-    slidesToShow: 3
+    settings: {
+      slidesToShow: 1,
+      centerMode: true,
+      variableWidth: true
+    }
   }]
-}); //$('.details__slider-nav').slick({
-//  slidesToShow: 4,
-//  slidesToScroll: 1,
-//  initialSlide:3,
-//  asNavFor: '.details__slider-for',
-//  dots: true,
-//  centerMode: true,
-//  focusOnSelect: true,
-//  mobileFirst: true,
-//  responsive: [
-//    {
-//      breakpoint: TABLET_WIDTH,
-//      slidesToShow: 6
-//    }
-//  ]
-//});
-// Параметры слайдеров достопримечательностей
+});
+$('.details__slider-nav').slick({
+  slidesToShow: 4,
+  slidesToScroll: 1,
+  initialSlide: 2,
+  dots: false,
+  asNavFor: '.details__slider-for',
+  focusOnSelect: true,
+  variableWidth: true,
+  mobileFirst: true,
+  responsive: [{
+    breakpoint: TABLET_WIDTH,
+    settings: {
+      slidesToShow: 6,
+      dots: true
+    }
+  }]
+}); // Параметры слайдеров достопримечательностей
 
 var setSlickParameters = function setSlickParameters(arrowPrev, arrowNext) {
   var slickParameters = {

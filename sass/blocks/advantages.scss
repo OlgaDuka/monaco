@@ -1,6 +1,7 @@
 .advantages {
   @include container();
   min-height: 287px;
+  margin-bottom: 90px;
 
   @include tablet {
     margin-top: 24px;

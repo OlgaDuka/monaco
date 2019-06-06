@@ -351,8 +351,8 @@ var setSlickParameters = function setSlickParameters(arrowPrev, arrowNext) {
     infinite: true,
     slidesToShow: 1,
     slidesToScroll: 1,
+    variableWidth: true,
     dots: false,
-    //arrows: !0,
     prevArrow: $(arrowPrev),
     nextArrow: $(arrowNext),
     responsive: [{

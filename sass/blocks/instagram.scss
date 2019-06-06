@@ -1,7 +1,7 @@
 .instagram {
   width: 100%;
-  height: 420px;
-  margin-bottom: 100px;
+  height: 415px;
+  margin-bottom: 93px;
   overflow: hidden;
 
   @include tablet {
@@ -17,13 +17,13 @@
 }
 
 .instagram__wrap {
-  margin-bottom: 15px;
+  margin-bottom: 10px;
   padding-left: 110px;
   display: flex;
   flex-direction: column;
   background-image: url('../img/insta.jpg');
   background-repeat: no-repeat;
-  background-position: left 15px center;
+  background-position: left 7px center;
 
   @include tablet {
     margin-left: 40px;
@@ -37,8 +37,9 @@
 
 .instagram__caption {
   margin: 0;
+  margin-top: 10px;
   color: $text-gray;
-  @include font-reg(14px, 35px, 0.3px);
+  @include font-reg(14px, 25px, 0.3px);
 
 }
 

@@ -20,9 +20,9 @@
 
 .lifehack__caption {
   margin: 0 auto;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
   color: $title-dark;
-  @include second-font-reg(30px, 40px);
+  @include second-font-reg(30px, 40px, 0.1px);
   text-align: center;
 
   span {
@@ -42,7 +42,6 @@
 
 .lifehack__slider {
 
-
   @include tablet {
     display: flex;
     flex-direction: column;
@@ -59,11 +58,11 @@
 }
 
 .lifehack__container {
-  margin-bottom: 20px;
+  margin-bottom: 0px;
   display: flex;
   width: 308px;
   box-sizing: border-box;
-  padding-top: 26px;
+  padding-top: 13px;
 
   @include tablet {
     margin-bottom: 0;
@@ -85,7 +84,7 @@
 }
 
 .lifehack__item {
-  padding-top: 104px;
+  padding-top: 92px;
   display: flex;
   flex-direction: column;
 
@@ -102,8 +101,8 @@
 }
 
 .lifehack__icon {
-  width: 100px;
-  height: 100px;
+  width: 80px;
+  height: 80px;
   border: 1px solid $border-gray;
   border-radius: 50%;
   position: absolute;
@@ -112,7 +111,7 @@
   &::after {
     content: '';
     width: 2px;
-    height: 100px;
+    height: 80px;
     position: absolute;
     top: 0;
     left: 50%;
@@ -139,7 +138,7 @@
 
 .lifehack__icon-image {
   position: absolute;
-  top: 30px;
+  top: 20px;
   left: 50%;
   transform: translateX(-50%);
 
@@ -159,9 +158,10 @@
 }
 
 .lifehack__name {
-  margin-top: 10px;
+  margin-top: 0;
+  margin-bottom: 0px;
   color: $title-dark;
-  @include second-font-reg(24px, 30px, 0.4px);
+  @include second-font-reg(24px, 30px, 0.1px);
   text-align: center;
 
   @include tablet {
@@ -170,7 +170,8 @@
 }
 
 .lifehack__text {
-  @include font-reg(15px, 30px, 0.4px);
+  margin-top: 10px;
+  @include font-reg(15px, 30px, 0.1px);
   text-align: center;
 
   @include tablet {

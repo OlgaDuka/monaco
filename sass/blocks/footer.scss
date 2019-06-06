@@ -1,13 +1,21 @@
 .footer {
   width: 100%;
   height: 580px;
-  padding-top: 136px;
+  padding-top: 130px;
   background-color: $bg-gray;
-  background-image: url('../img/bg_footer_mobile.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center center;
+  background-image: url('../img/cloud_footer_mobile.png'), url('../img/bg_footer_mobile.jpg');
+  background-repeat: no-repeat, no-repeat;
+  background-size: contain, cover;
+  background-position: center top -60px, center center;
   overflow: hidden;
+
+  @include retina(2) {
+    background-image: url('../img/cloud_footer_mobile@2x.png'), url("../img/bg_footer_mobile@2x.jpg");
+  }
+
+  @include retina(3) {
+    background-image: url('../img/cloud_footer_mobile@3x.png'), url("../img/bg_footer_mobile@3x.jpg");
+  }
 
   @include tablet {
     padding-top: 320px;

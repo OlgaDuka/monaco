@@ -1,7 +1,7 @@
 .advantages {
   @include container();
   min-height: 287px;
-  margin-bottom: 90px;
+  margin-bottom: 100px;
 
   @include tablet {
     margin-top: 24px;
@@ -111,8 +111,7 @@
 }
 
 .advantages__top {
-  margin-bottom: 10px;
-  letter-spacing: 0.4px;
+  margin-bottom: 3px;
   color: $title-dark;
   @include second-font-reg(36px, 48px);
 }
@@ -132,7 +131,7 @@
   margin-bottom: 8px;
   width: 180px;
   color: $text-gray;
-  @include font-reg(14px, 25px);
+  @include font-reg(14px, 25px, 0.1px);
 
   @include tablet {
     width: 180px;

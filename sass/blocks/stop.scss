@@ -20,10 +20,11 @@
 }
 
 .stop__caption {
-  margin-bottom: 17px;
+  margin-top: 10px;
+  margin-bottom: 22px;
   text-align: center;
   color: $title-dark;
-  @include second-font-reg(30px, 40px);
+  @include second-font-reg(30px, 40px, 0.1px);
 
   span {
     color: $text-orange;
@@ -70,20 +71,21 @@
 
 .stop__item {
   padding: 0;
-  padding-top: 20px;
   height: 280px;
   display: flex;
   flex-direction: column;
+  justify-content: flex-end;
   align-items: center;
-  justify-content: space-between;
   border: 1px solid $border-gray;
   box-sizing: border-box;
 
   a {
+    height: 100%;
     text-decoration: none;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-between;
   }
 
   @include tablet {
@@ -97,14 +99,16 @@
 }
 
 .stop__rating {
+  margin-top: 15px;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 12px;
+  margin-bottom: 4px;
 }
 
 .stop__rating-icon {
-  margin-right: 8px;
+  margin-right: 6px;
+
   &:last-child {
     margin-right: 0;
   }
@@ -113,6 +117,7 @@
 .stop__name {
   padding: 0;
   margin: 0;
+  margin-bottom: 10px;
   color: $title-dark;
   @include second-font-reg(20px, 30px, 0.2px);
 }
@@ -124,7 +129,7 @@
 
 .stop__image-cover picture {
   width: 100%;
-  height: 250px;
+  height: auto;
 
   @include tablet {
     height: 216px;
@@ -168,7 +173,7 @@
 }
 
 .stop .slick-dotted.slick-slider {
-  margin-bottom: 70px;;
+  margin-bottom: 106px;;
 }
 
 .stop .slick-dots li button::before {

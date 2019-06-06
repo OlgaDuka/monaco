@@ -1,5 +1,6 @@
 .intro {
   margin: 0 auto;
+  margin-bottom: 22px;
   @include desktop {
     width: $desktop-content-width;
   }
@@ -8,6 +9,6 @@
 .intro__description {
   margin-bottom: 8px;
   color: $text-gray;
-  @include font-reg(15px, 30px, 0.4px);
+  @include font-reg(15px, 30px, 0.1px);
   text-align: center;
 }

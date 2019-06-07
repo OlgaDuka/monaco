@@ -1504,10 +1504,10 @@ input[type=tel] {
   height: 580px;
   padding-top: 130px;
   background-color: #cecece;
-  background-image: url("../img/cloud_footer_mobile.png"), url("../img/bg_footer_mobile.jpg");
-  background-repeat: no-repeat, no-repeat;
-  background-size: contain, cover;
-  background-position: center top -60px, center center;
+  background-image: url("../img/bg_footer_mobile.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center top;
   overflow: hidden; }
 
 .footer__caption {
@@ -1526,13 +1526,13 @@ input[type=tel] {
   margin-bottom: 24px;
   width: 100%;
   min-height: 580px;
+  height: auto;
   padding-bottom: 50px;
   background-color: #cecece;
-  background-image: url("../img/cloud_mobile.png"), url("../img/bg_main_mobile.jpg");
-  background-repeat: no-repeat, no-repeat;
-  background-size: contain, cover;
-  background-position: center bottom -35px, center center;
-  overflow: hidden; }
+  background-image: url("../img/bg_main_mobile.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center bottom; }
 
 .header__content {
   margin: 0 auto;
@@ -2525,6 +2525,7 @@ input[type=tel] {
       letter-spacing: 0.4px;
       font-weight: 700; }
     .header {
+      min-height: 992px;
       background-image: url("../img/bg_main_tablet.jpg"); }
     .header__content {
       max-width: 768px;
@@ -2732,18 +2733,26 @@ input[type=tel] {
       line-height: 30px; } }
 
 @media (min-width: 768px) and (-webkit-min-device-pixel-ratio: 3), (min-width: 768px) and (min-resolution: 288dpi), (min-width: 768px) and (min-resolution: 3dppx) {
+    .footer {
+      background-image: url("../img/bg_footer_tablet@3x.jpg"); }
     .header {
       background-image: url("../img/bg_main_tablet@3x.jpg"); } }
 
 @media (min-width: 768px) and (-webkit-min-device-pixel-ratio: 1.5), (min-width: 768px) and (min-resolution: 144dpi), (min-width: 768px) and (min-resolution: 1.5dppx) {
+    .footer {
+      background-image: url("../img/bg_footer_tablet@2x.jpg"); }
     .header {
       background-image: url("../img/bg_main_tablet@2x.jpg"); } }
 
 @media (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 3), (min-width: 1200px) and (min-resolution: 288dpi), (min-width: 1200px) and (min-resolution: 3dppx) {
+    .footer {
+      background-image: url("../img/bg_footer@3x.jpg"); }
     .header {
       background-image: url("../img/bg_main@3x.jpg"); } }
 
 @media (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 1.5), (min-width: 1200px) and (min-resolution: 144dpi), (min-width: 1200px) and (min-resolution: 1.5dppx) {
+    .footer {
+      background-image: url("../img/bg_footer@2x.jpg"); }
     .header {
       background-image: url("../img/bg_main@2x.jpg"); } }
 
@@ -3036,9 +3045,9 @@ input[type=tel] {
 
 @media (-webkit-min-device-pixel-ratio: 3), (min-resolution: 288dpi), (min-resolution: 3dppx) {
     .footer {
-      background-image: url("../img/cloud_footer_mobile@3x.png"), url("../img/bg_footer_mobile@3x.jpg"); }
+      background-image: url("../img/bg_footer_mobile@3x.jpg"); }
     .header {
-      background-image: url("../img/cloud_mobile.png"), url("../img/bg_main_mobile@3x.jpg"); } }
+      background-image: url("../img/bg_main_mobile@3x.jpg"); } }
 
 @media print {
   .datepickers-container {
@@ -3046,6 +3055,6 @@ input[type=tel] {
 
 @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
     .footer {
-      background-image: url("../img/cloud_footer_mobile@2x.png"), url("../img/bg_footer_mobile@2x.jpg"); }
+      background-image: url("../img/bg_footer_mobile@2x.jpg"); }
     .header {
-      background-image: url("../img/cloud_mobile.png"), url("../img/bg_main_mobile@2x.jpg"); } }
+      background-image: url("../img/bg_main_mobile@2x.jpg"); } }

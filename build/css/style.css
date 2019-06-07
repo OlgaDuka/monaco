@@ -1388,6 +1388,10 @@ input[type=tel] {
   width: 100%;
   margin-bottom: 20px; }
 
+.details__container {
+  outline: none;
+  cursor: pointer; }
+
 .details__item {
   margin: 0 auto;
   width: 100%;
@@ -1466,7 +1470,8 @@ input[type=tel] {
   width: 60px;
   height: 60px;
   margin-left: 5px;
-  margin-right: 5px; }
+  margin-right: 5px;
+  outline: none; }
 
 .details__slider-for {
   height: 500px; }
@@ -2768,30 +2773,6 @@ input[type=tel] {
       .transport__plan-item::before {
         left: -26px; } }
 
-@media (min-width: 768px) and (-webkit-min-device-pixel-ratio: 3), (min-width: 768px) and (min-resolution: 288dpi), (min-width: 768px) and (min-resolution: 3dppx) {
-    .footer {
-      background-image: url("../img/bg_footer_tablet@3x.jpg"); }
-    .header {
-      background-image: url("../img/bg_main_tablet@3x.jpg"); } }
-
-@media (min-width: 768px) and (-webkit-min-device-pixel-ratio: 1.5), (min-width: 768px) and (min-resolution: 144dpi), (min-width: 768px) and (min-resolution: 1.5dppx) {
-    .footer {
-      background-image: url("../img/bg_footer_tablet@2x.jpg"); }
-    .header {
-      background-image: url("../img/bg_main_tablet@2x.jpg"); } }
-
-@media (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 3), (min-width: 1200px) and (min-resolution: 288dpi), (min-width: 1200px) and (min-resolution: 3dppx) {
-    .footer {
-      background-image: url("../img/bg_footer@3x.jpg"); }
-    .header {
-      background-image: url("../img/bg_main@3x.jpg"); } }
-
-@media (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 1.5), (min-width: 1200px) and (min-resolution: 144dpi), (min-width: 1200px) and (min-resolution: 1.5dppx) {
-    .footer {
-      background-image: url("../img/bg_footer@2x.jpg"); }
-    .header {
-      background-image: url("../img/bg_main@2x.jpg"); } }
-
 @media (min-width: 1200px) {
     .mobile-only {
       display: none; }
@@ -3081,18 +3062,6 @@ input[type=tel] {
     .transport {
       margin-bottom: 180px; } }
 
-@media (-webkit-min-device-pixel-ratio: 3), (min-resolution: 288dpi), (min-resolution: 3dppx) {
-    .footer {
-      background-image: url("../img/bg_footer_mobile@3x.jpg"); }
-    .header {
-      background-image: url("../img/bg_main_mobile@3x.jpg"); } }
-
 @media print {
   .datepickers-container {
     display: none; } }
-
-@media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
-    .footer {
-      background-image: url("../img/bg_footer_mobile@2x.jpg"); }
-    .header {
-      background-image: url("../img/bg_main_mobile@2x.jpg"); } }

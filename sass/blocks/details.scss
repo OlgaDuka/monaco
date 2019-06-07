@@ -46,6 +46,8 @@
 }
 
 .details__container {
+  outline: none;
+  cursor: pointer;
   @include tablet {
 
   }
@@ -160,6 +162,7 @@
   height: 60px;
   margin-left: 5px;
   margin-right: 5px;
+  outline: none;
 
   @include tablet {
     width: 90px;

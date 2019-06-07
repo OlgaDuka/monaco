@@ -10,39 +10,38 @@
   background-size: cover;
   background-position: center bottom;
 
-  @include retina(2) {
-    background-image: url("../img/bg_main_mobile@2x.jpg");
-  }
+//  @include retina(2) {
+//    background-image: url("../img/bg_main_mobile@2x.jpg");
+//  }
 
-  @include retina(3) {
-    background-image: url("../img/bg_main_mobile@3x.jpg");
-  }
-
+//  @include retina(3) {
+//    background-image: url("../img/bg_main_mobile@3x.jpg");
+//  }
 
   @include tablet {
     min-height: 800px;
     background-image: url('../img/bg_main_tablet.jpg');
 
-    @include retina(2) {
-      background-image: url("../img/bg_main_tablet@2x.jpg");
-    }
+//    @include retina(2) {
+//      background-image: url("../img/bg_main_tablet@2x.jpg");
+//    }
 
-    @include retina(3) {
-      background-image: url("../img/bg_main_tablet@3x.jpg");
-    }
+//    @include retina(3) {
+//      background-image: url("../img/bg_main_tablet@3x.jpg");
+//    }
   }
 
   @include desktop {
     min-height: 800px;
     background-image: url('../img/bg_main.jpg');
 
-    @include retina(2) {
-      background-image: url("../img/bg_main@2x.jpg");
-    }
+//    @include retina(2) {
+//      background-image: url("../img/bg_main@2x.jpg");
+//    }
 
-    @include retina(3) {
-      background-image: url("../img/bg_main@3x.jpg");
-    }
+//    @include retina(3) {
+//      background-image: url("../img/bg_main@3x.jpg");
+//    }
   }
 }
 

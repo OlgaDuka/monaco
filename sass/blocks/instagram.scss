@@ -6,13 +6,11 @@
 
   @include tablet {
     margin-bottom: 142px;
-    height: 565px;
     position: relative;
   }
 
   @include desktop {
     margin-bottom: 120px;
-    height: 720px;
   }
 }
 
@@ -46,6 +44,7 @@
 .instagram__collage {
   display: flex;
   flex-flow: wrap;
+  justify-content: center;
 
   li {
     margin: 5px;
@@ -62,20 +61,10 @@
     transform: translateX(-50%);
     width: $desktop-content-width;
     overflow: hidden;
-
-    li img {
-      width: 222px;
-      height: 222px;
-    }
   }
 
   @include desktop {
     top: 120px;
     width: $container-desktop-width-maxi;
-
-    li img {
-      width: 290px;
-      height: 290px;
-    }
   }
 }

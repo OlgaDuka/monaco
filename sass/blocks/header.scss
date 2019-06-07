@@ -5,43 +5,43 @@
   height: auto;
   padding-bottom: 50px;
   background-color: $bg-gray;
-  background-image: url('../img/bg_main_mobile.jpg');
-  background-repeat:no-repeat;
-  background-size: cover;
+  background-image: url('../img/bg_house_mobile.jpg'), url('../img/bg_main_mobile.jpg');
+  background-repeat: no-repeat, no-repeat;
+  background-size: cover, cover;
   background-position: center bottom;
 
-//  @include retina(2) {
-//    background-image: url("../img/bg_main_mobile@2x.jpg");
-//  }
+  @include retina(2) {
+    background-image: url('../img/bg_house_mobile@2x.jpg'), url("../img/bg_main_mobile@2x.jpg");
+  }
 
-//  @include retina(3) {
-//    background-image: url("../img/bg_main_mobile@3x.jpg");
-//  }
+  @include retina(3) {
+    background-image: url('../img/bg_house_mobile@3x.jpg'), url("../img/bg_main_mobile@3x.jpg");
+  }
 
   @include tablet {
-    min-height: 800px;
-    background-image: url('../img/bg_main_tablet.jpg');
+    min-height: 100vh;
+    background-image: url('../img/bg_house_tablet.jpg'), url('../img/bg_main_tablet.jpg');
 
-//    @include retina(2) {
-//      background-image: url("../img/bg_main_tablet@2x.jpg");
-//    }
+    @include retina(2) {
+      background-image: url('../img/bg_house_tablet@2x.jpg'), url("../img/bg_main_tablet@2x.jpg");
+    }
 
-//    @include retina(3) {
-//      background-image: url("../img/bg_main_tablet@3x.jpg");
-//    }
+    @include retina(3) {
+      background-image: url('../img/bg_house_tablet@3x.jpg'), url("../img/bg_main_tablet@3x.jpg");
+    }
   }
 
   @include desktop {
-    min-height: 800px;
-    background-image: url('../img/bg_main.jpg');
+    min-height: 100vh;
+    background-image: url('../img/bg_house.jpg'), url('../img/bg_main.jpg');
 
-//    @include retina(2) {
-//      background-image: url("../img/bg_main@2x.jpg");
-//    }
+    @include retina(2) {
+      background-image: url('../img/bg_house@2x.jpg'), url("../img/bg_main@2x.jpg");
+    }
 
-//    @include retina(3) {
-//      background-image: url("../img/bg_main@3x.jpg");
-//    }
+    @include retina(3) {
+      background-image: url('../img/bg_house@3x.jpg'), url("../img/bg_main@3x.jpg");
+    }
   }
 }
 
@@ -65,7 +65,7 @@
 
   @include tablet {
     margin-top: 17px;
-
+    margin-bottom: 0;
   };
 
   @include desktop {
@@ -132,10 +132,16 @@
   }
 
   @include desktop {
-    margin-bottom: 40px;
+    margin-bottom: 10px;
   }
 }
 
 .header__search {
 
+}
+
+.header__scroll {
+  @include tablet {
+    margin-bottom: auto;
+  }
 }

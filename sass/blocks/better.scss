@@ -187,12 +187,6 @@
   flex-flow: column;
   align-items: center;
 
-  picture {
-    @include desktop {
-      order: 3;
-    }
-  }
-
   @include desktop {
     align-items: flex-start;
   }
@@ -204,10 +198,6 @@
   color: $title-dark;
   @include second-font-reg(24px, 30px);
   text-align: center;
-
-  @include desktop {
-    order: 1;
-  }
 }
 
 .better__wrap-text {
@@ -215,7 +205,6 @@
 
   @include desktop {
     height: 260px;
-    order: 2;
   }
 }
 

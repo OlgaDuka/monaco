@@ -20,7 +20,7 @@ const feed = new Instafeed({
   accessToken: '14110486070.1677ed0.e29f390d542548cc9d383954ff2b2f3a',
   target: 'Instafeed',
   resolution: 'thumbnail',
-  limit: 22,
+  limit: 50,
   template: '<li><img src="{{image}}" /></li>',
 });
 

@@ -1,6 +1,6 @@
 .footer {
   width: 100%;
-  height: 580px;
+  min-height: 580px;
   padding-top: 130px;
   background-color: $bg-gray;
   background-image: url('../img/bg_footer_mobile.jpg');
@@ -9,40 +9,42 @@
   background-position: center top;
   overflow: hidden;
 
-//  @include retina(2) {
-//    background-image: url("../img/bg_footer_mobile@2x.jpg");
-//  }
+  @include retina(2) {
+    background-image: url("../img/bg_footer_mobile@2x.jpg");
+  }
 
-//  @include retina(3) {
-//    background-image: url("../img/bg_footer_mobile@3x.jpg");
-//  }
+  @include retina(3) {
+    background-image: url("../img/bg_footer_mobile@3x.jpg");
+  }
 
   @include tablet {
     padding-top: 320px;
+    min-height: 100vh;
     background-image: url('../img/bg_footer_tablet.jpg');
     min-height: 800px;
 
-//    @include retina(2) {
-//      background-image: url("../img/bg_footer_tablet@2x.jpg");
-//    }
+    @include retina(2) {
+      background-image: url("../img/bg_footer_tablet@2x.jpg");
+    }
 
-//    @include retina(3) {
-//      background-image: url("../img/bg_footer_tablet@3x.jpg");
-//    }
+    @include retina(3) {
+      background-image: url("../img/bg_footer_tablet@3x.jpg");
+    }
   }
 
   @include desktop {
+    min-height: 100vh;
     padding-top: 320px;
     background-image: url('../img/bg_footer.jpg');
     background-size: cover;
 
-//    @include retina(2) {
-//      background-image: url("../img/bg_footer@2x.jpg");
-//    }
+    @include retina(2) {
+      background-image: url("../img/bg_footer@2x.jpg");
+    }
 
-//    @include retina(3) {
-//      background-image: url("../img/bg_footer@3x.jpg");
-//    }
+    @include retina(3) {
+      background-image: url("../img/bg_footer@3x.jpg");
+    }
   }
 }
 

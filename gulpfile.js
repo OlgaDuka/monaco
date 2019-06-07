@@ -64,10 +64,7 @@ gulp.task('style', function (done) {
           'last 2 versions',
           'IE 11',
           'Firefox ESR'
-        ]}),
-      mqpacker({
-        sort: true
-      })
+        ]})
     ]))
     .pipe(rename('style.css'))
     .pipe(gulp.dest('css'))

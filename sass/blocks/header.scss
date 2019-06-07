@@ -2,24 +2,25 @@
   margin-bottom: 24px;
   width: 100%;
   min-height: 580px;
+  height: auto;
   padding-bottom: 50px;
   background-color: $bg-gray;
-  background-image: url('../img/cloud_mobile.png'), url('../img/bg_main_mobile.jpg');
-  background-repeat: no-repeat, no-repeat;
-  background-size: contain, cover;
-  background-position: center bottom -35px, center center;
-  overflow: hidden;
+  background-image: url('../img/bg_main_mobile.jpg');
+  background-repeat:no-repeat;
+  background-size: cover;
+  background-position: center bottom;
 
   @include retina(2) {
-    background-image: url('../img/cloud_mobile.png'), url("../img/bg_main_mobile@2x.jpg");
+    background-image: url("../img/bg_main_mobile@2x.jpg");
   }
 
   @include retina(3) {
-    background-image: url('../img/cloud_mobile.png'), url("../img/bg_main_mobile@3x.jpg");
+    background-image: url("../img/bg_main_mobile@3x.jpg");
   }
 
 
   @include tablet {
+    min-height: 992px;
     background-image: url('../img/bg_main_tablet.jpg');
 
     @include retina(2) {

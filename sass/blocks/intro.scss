@@ -1,6 +1,12 @@
 .intro {
   margin: 0 auto;
   margin-bottom: 22px;
+
+  @include tablet {
+    margin-bottom: 20px;
+    width: $tablet-content-width;
+  }
+
   @include desktop {
     width: $desktop-content-width;
   }
@@ -11,4 +17,8 @@
   color: $text-gray;
   @include font-reg(15px, 30px, 0.1px);
   text-align: center;
+
+  @include tablet {
+    margin-top: 25px;
+  }
 }

@@ -20,7 +20,7 @@
 
 
   @include tablet {
-    min-height: 992px;
+    min-height: 800px;
     background-image: url('../img/bg_main_tablet.jpg');
 
     @include retina(2) {
@@ -33,6 +33,7 @@
   }
 
   @include desktop {
+    min-height: 800px;
     background-image: url('../img/bg_main.jpg');
 
     @include retina(2) {
@@ -63,7 +64,13 @@
   display: flex;
   justify-content: space-between;
 
+  @include tablet {
+    margin-top: 17px;
+
+  };
+
   @include desktop {
+    margin-bottom: 0;
     width: 100%;
   }
 }
@@ -84,6 +91,15 @@
     background-image: url('../img/monako-visit-logo.svg');
     background-size: 96px 30px;
   }
+
+  @include tablet {
+    height: 32px;
+
+    &--monaco {
+      margin-top: 7px;
+      background-size: 96px 30px;
+    }
+  }
 }
 
 .header__title {
@@ -95,11 +111,12 @@
   text-transform: uppercase;
 
   @include tablet {
-    @include second-font-bold(140px, 187px);
+    margin-bottom: 10px;
+    @include second-font-bold(140px, 187px, 5px);
   }
 
   @include desktop {
-    @include second-font-bold(200px, 267px);
+    @include second-font-bold(200px, 160px, 7px);
   }
 }
 
@@ -111,8 +128,8 @@
   text-align: center;
 
   @include tablet {
-    margin-bottom: 15px;
-    @include font-medium(30px, 36px);
+    margin-bottom: 20px;
+    @include font-medium(30px, 36px, 0.1px);
   }
 
   @include desktop {

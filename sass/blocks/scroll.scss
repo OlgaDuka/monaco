@@ -23,6 +23,10 @@
   color: $white;
   @include font-medium(13px, 15px);
   text-align: center;
+
+  @include tablet {
+    margin-bottom: 10px;
+  }
 }
 
 .scroll__btn {

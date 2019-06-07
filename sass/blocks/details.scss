@@ -1,5 +1,9 @@
 .details {
   margin-bottom: 100px;
+
+  @include tablet {
+    margin-bottom: 108px;
+  }
 }
 
 .details__caption {
@@ -15,7 +19,7 @@
   }
 
   @include tablet {
-    margin-bottom: 30px;
+    margin-bottom: 37px;
     width: 450px;
     @include second-font-reg(50px, 60px, 0.4px);
   }
@@ -215,4 +219,8 @@
 .details__slider-for .slick-dots .slick-active {
   color: $bg-orange;
   background-color: $bg-orange;
+}
+
+.slick-dotted.slick-slider {
+  margin-bottom: 65px;
 }

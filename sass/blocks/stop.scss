@@ -31,8 +31,8 @@
   }
 
   @include tablet {
-    line-height: 41px;
-    font-size: 35px;
+    width: 454px;
+    @include second-font-reg(50px, 60px, 0.1px);
   }
 
   @include desktop {

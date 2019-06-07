@@ -4,8 +4,8 @@
   margin-bottom: 100px;
 
   @include tablet {
-    margin-top: 24px;
     min-height: 335px;
+    margin-bottom: 142px;
   }
 
   @include desktop {
@@ -114,6 +114,10 @@
   margin-bottom: 3px;
   color: $title-dark;
   @include second-font-reg(36px, 48px);
+
+  @include tablet {
+    margin-bottom: 5px;
+  }
 }
 
 .advantages__middle {
@@ -123,6 +127,7 @@
   @include second-font-reg(24px, 25px, 0.2px);
 
   @include tablet {
+    margin-bottom: 20px;
     width: 100px;
   }
 }

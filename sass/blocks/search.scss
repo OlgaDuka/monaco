@@ -11,6 +11,7 @@
   border-radius: 40px;
 
   @include tablet {
+    margin-bottom: 90px;
     width: $tablet-content-width;
     padding-left: 10px;
     padding-right: 10px;

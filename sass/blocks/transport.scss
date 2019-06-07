@@ -3,7 +3,7 @@
   margin-bottom: 105px;
 
   @include tablet {
-    margin-bottom: 180px;
+    margin-bottom: 155px;
   }
 
   @include desktop {
@@ -27,7 +27,7 @@
   }
 
   @include tablet {
-    margin-bottom: 30px;
+    margin-bottom: 32px;
     width: 350px;
     @include second-font-reg(50px, 60px);
   }
@@ -50,7 +50,8 @@
   border: 1px solid $border-gray;
 
   @include tablet {
-    padding: 40px 40px;
+    margin-bottom: 0;
+    padding: 40px 40px 25px;;
     background-image: url("../img/svg-sprite/icon-traffic.svg");
     background-repeat: no-repeat;
     background-position: top 30px right 30px;
@@ -113,10 +114,12 @@
 }
 
 .transport__plan {
-  padding-left: 30px;
+  padding-top: 12px;
+  padding-left: 23px;
   border-left: 1px dashed $border-gray;
 
   @include desktop {
+
     padding-left: 20px;
   }
 }
@@ -138,7 +141,11 @@
   }
 
   @include tablet {
-    line-height: 30px;
+    line-height: 20px;
+
+    &::before {
+      left: -26px;
+    }
   }
 
   @include desktop {

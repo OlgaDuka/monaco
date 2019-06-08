@@ -4,6 +4,10 @@
   @include tablet {
     margin-bottom: 108px;
   }
+
+  @include desktop {
+    margin-bottom: 167px;
+  }
 }
 
 .details__caption {
@@ -26,6 +30,7 @@
 
   @include desktop {
     width: 320px;
+    margin-bottom: 38px;
   }
 }
 
@@ -159,20 +164,54 @@
 }
 
 .details__item-mini {
-  width: 60px;
-  height: 60px;
-  margin-left: 5px;
-  margin-right: 5px;
+  width: 50px;
+  height: 50px;
+  margin: 5px 10px;
   outline: none;
+  border-radius: 50%;
+  background-image: url('../img/nav_0.jpg');
+  position: relative;
+
+  &--1 {
+    background-image: url('../img/nav_1.jpg');
+  }
+
+  &--2 {
+    background-image: url('../img/nav_2.jpg');
+  }
+
+  &--3 {
+    background-image: url('../img/nav_3.jpg');
+  }
+
+  &--4 {
+    background-image: url('../img/nav_4.jpg');
+  }
+
+  &--5 {
+    background-image: url('../img/nav_5.jpg');
+  }
+
+  &::before {
+    content: '';
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    left: -5px;
+    top: -5px;
+    border-radius: 50%;
+    border: 2px solid $bg-orange;
+  }
 
   @include tablet {
-    width: 90px;
-    height: 90px;
+    width: 80px;
+    height: 80px;
+
+    &::before {
+      width: 90px;
+      height: 90px;
+    }
   }
-}
-
-.details_image-mini {
-
 }
 
 .details__slider-for {
@@ -180,6 +219,18 @@
 
   @include tablet {
     height: 500px;
+  }
+}
+
+.details__slider-nav .slick-current .details__item-mini::before {
+  border-color: transparent;
+  background-image: url('../img/circle.svg');
+  background-repeat: no-repeat;
+  background-size: 60px 60px;
+  background-position: left -2px top -2px;
+
+  @include tablet {
+    background-size: 90px 90px;
   }
 }
 
@@ -229,4 +280,8 @@
 
 .slick-dotted.slick-slider {
   margin-bottom: 65px;
+
+  @include desktop {
+    margin-bottom: 20px;
+  }
 }

@@ -9,12 +9,9 @@
   }
 
   @include desktop {
-    padding-top: 38px;
+    padding-top: 27px;
     min-height: 302px;
-  }
-
-  @include desktop-max {
-    margin-bottom: 120px;
+    margin-bottom: 132px;
   }
 }
 

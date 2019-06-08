@@ -7,12 +7,13 @@
   }
 
   @include desktop {
+    margin-bottom: 138px;
     width: $desktop-content-width;
   }
 
-  @include desktop-max {
-    margin-bottom: 180px;
-  }
+//  @include desktop-max {
+//    margin-bottom: 180px;
+//  }
 }
 
 .transport__caption {
@@ -31,6 +32,10 @@
     width: 350px;
     @include second-font-reg(50px, 60px);
   }
+
+  @include desktop {
+    margin-bottom: 42px;
+  }
 }
 
 .transport__slider {
@@ -48,6 +53,7 @@
   max-width: $tablet-content-width;
   padding: 15px 10px 0 20px;
   border: 1px solid $border-gray;
+  outline: none;
 
   @include tablet {
     margin-bottom: 0;
@@ -70,6 +76,7 @@
   }
 
   @include desktop {
+    margin-bottom: 15px;
     padding: 25px 10px 30px 40px;
     width: 590px;
     height: 410px;

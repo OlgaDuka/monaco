@@ -8,7 +8,10 @@
   }
 
   @include desktop {
+    margin-bottom: 0px;
     width: $desktop-content-width;
+    padding-left: 90px;
+    padding-right: 90px;
   }
 }
 

@@ -10,6 +10,7 @@
   }
 
   @include desktop {
+    height: 435px;
     margin-bottom: 120px;
   }
 }
@@ -59,12 +60,12 @@
     top: 100px;
     left: 50%;
     transform: translateX(-50%);
-    width: $desktop-content-width;
+    width: 100vw;
     overflow: hidden;
   }
 
   @include desktop {
     top: 120px;
-    width: $container-desktop-width-maxi;
+    width: 100vw;
   }
 }

@@ -8,13 +8,14 @@
   overflow: hidden;
 
   @include tablet {
-    margin-bottom: 45px;
+    margin-bottom: 44px;
     height: 1288px;
     background-image: url('../img/bg_lifehack_tablet.jpg');
   }
 
   @include desktop {
-    height: 1388px;
+    margin-bottom: 0px;
+    height: 1380px;
     background-image: url('../img/bg_lifehack.jpg');
   }
 }
@@ -31,12 +32,13 @@
   }
 
   @include tablet {
-    margin-bottom: 30px;
+    margin-bottom: 36px;
     width: 450px;
-    @include second-font-reg(50px, 60px, 0.4px);
+    @include second-font-reg(50px, 60px, 0.1px);
   }
 
   @include desktop {
+    margin-bottom: 48px;
     width: 730px;
   }
 }
@@ -64,6 +66,7 @@
   width: 308px;
   box-sizing: border-box;
   padding-top: 13px;
+  outline: none;
 
   @include tablet {
     margin-bottom: 0;
@@ -94,10 +97,16 @@
   position: relative;
 
   @include tablet {
+    margin-bottom: 12px;
     width: 100%;
     padding-top: 0;
     flex-direction: row;
     justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  @include desktop {
+    margin-bottom: 30px;
   }
 }
 

@@ -4,6 +4,10 @@
   flex-flow: column;
   align-items: center;
 
+  @include tablet {
+    margin-bottom: 132px;
+  }
+
   @include desktop {
     margin-bottom: 120px;
   }
@@ -26,7 +30,7 @@
   }
 
   @include tablet {
-    margin-bottom: 30px;
+    margin-bottom: 32px;
     width: 450px;
     @include second-font-reg(50px, 60px, 0.4px);
   }
@@ -53,6 +57,7 @@
   justify-content: space-between;
 
   @include tablet {
+    margin-bottom: 10px;
     width: $tablet-content-width;
   }
 
@@ -85,15 +90,35 @@
   &--active {
     background-image: url('../img/active_item_mobile.svg');
     background-repeat: no-repeat;
-    background-position: left 0 bottom;
+    background-position: left 0 bottom 8px;
+    background-size: 147px 77px;
 
     .better__link .better__name {
       color: $white;
     }
   }
 
+  @include tablet {
+    &:nth-child(3),
+    &:nth-child(4) {
+      .better__name {
+        height: auto;
+        margin-top: 10px;
+        margin-bottom: 20px;
+      }
+    }
+  }
+
   @include desktop {
     width: 355px;
+
+    &:nth-child(3),
+    &:nth-child(4) {
+      .better__name {
+        margin-top: 0;
+        margin-bottom: 10px;
+      }
+    }
 
     &--active {
       background-image: url('../img/active_item_desktop.svg');
@@ -148,9 +173,13 @@
   display: none;
 
   @include desktop {
+    margin: 0;
+    margin-left: 50px;
+    align-self: flex-start;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    justify-content: flex-start;
 
     .better__submenu-item {
       color: $text-gray;

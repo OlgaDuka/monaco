@@ -110,24 +110,25 @@
   }
 
   @include desktop {
+    margin-bottom: 10px;
     width: 355px;
 
     &:nth-child(3),
     &:nth-child(4) {
       .better__name {
-        margin-top: 0;
-        margin-bottom: 10px;
+        margin-top: 16px;
+        margin-bottom: 0;
+        height: 36px;
       }
     }
 
     &--active {
-      background-image: url('../img/active_item_desktop.svg');
-      background-size: 332px 54px;
-      background-position: left 0 top 47px;
+      background-image: none;
 
       .better__link .better__name {
         color: $bg-orange;
       }
+
     }
   }
 }
@@ -174,7 +175,7 @@
 
   @include desktop {
     margin: 0;
-    margin-left: 50px;
+    width: 330px;
     align-self: flex-start;
     display: flex;
     flex-direction: column;
@@ -182,8 +183,23 @@
     justify-content: flex-start;
 
     .better__submenu-item {
+      width: 100%;
+      padding-left: 50px;
       color: $text-gray;
       @include font-medium(15px, 40px, 0.3px);
+      text-align: left;
+      cursor: pointer;
+
+      &--active {
+        background-image: url('../img/active_item_desktop.svg');
+        background-repeat: no-repeat;
+        background-size: 300px 40px;
+        background-position: left 10px top 0;
+
+        .better__link .better__name {
+          color: $bg-orange;
+        }
+      }
     }
   }
 }

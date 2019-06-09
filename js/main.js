@@ -378,29 +378,49 @@ $('.better__slider--1').slick(better1);
 $('.better__slider--2').slick(better2);
 $('.better__slider--3').slick(better3);
 $('.better__slider--4').slick(better4);
-var menu = document.querySelector('.better__menu');
-var betterMenuItems = menu.querySelectorAll('.better__menu-item');
-var betterSliders = document.querySelectorAll('.better__slider');
+$('.better__menu-item[data-num="1"]').find('.better__submenu-item[data-subnum="0"]').addClass('better__submenu-item--active');
+
+var toggleSubmenu = function toggleSubmenu(numCurrentSlide, numNextSlide, numSlider) {
+  $('.better__menu-item[data-num="' + numSlider + '"]').find('.better__submenu-item[data-subnum="' + numCurrentSlide + '"]').removeClass('better__submenu-item--active');
+  $('.better__menu-item[data-num="' + numSlider + '"]').find('.better__submenu-item[data-subnum="' + numNextSlide + '"]').addClass('better__submenu-item--active');
+}; // Срабатывает до смены слайда в слайдере
+
+
+function beforeChangeHandler(event, slick, currentSlide, nextSlide) {
+  var numSlider = slick.$slider.data().num;
+  toggleSubmenu(currentSlide, nextSlide, numSlider);
+}
+
 $('.better__menu-item').click(function (evt) {
   if ($(this).hasClass('better__menu-item--active')) {
     return;
   } else {
-    var selector = $(this).data().num;
-    var targetSlider = $('.better__slider[data-num="' + selector + '"]'); // Селект нужного блока
+    var menuItem = $(this).data().num;
+    var targetSlider = $('.better__slider[data-num="' + menuItem + '"]');
+    var targetControl = $('.better__controls[data-num="' + menuItem + '"]');
+    $('.better').find('.better__slider--active').off('beforeChange', beforeChangeHandler); // Удаляет слушатель смены слайда
 
-    var targetControl = $('.better__controls[data-num="' + selector + '"]');
-    $('.better__slider').each(function (i, el) {
-      $(el).removeClass('better__slider--active');
-    });
-    $('.better__controls').each(function (i, el) {
-      $(el).removeClass('better__controls--active');
-    });
-    $('.better__menu-item').each(function (i, el) {
-      $(el).removeClass('better__menu-item--active');
-    });
+    targetSlider.on('beforeChange', beforeChangeHandler); // Добавляет слушатель смены слайда
+
+    $('.better').find('.better__slider--active').removeClass('better__slider--active');
+    $('.better').find('.better__menu-item--active').removeClass('better__menu-item--active');
+    $('.better').find('.better__submenu-item--active').removeClass('better__submenu-item--active');
+    $('.better').find('.better__controls--active').removeClass('better__controls--active');
     $(this).addClass('better__menu-item--active');
     targetSlider.addClass('better__slider--active');
     targetControl.addClass('better__controls--active');
+    $('.better').find('.better__slider--active').slick('slickGoTo', 0);
+    $('.better__menu-item[data-num="' + menuItem + '"]').find('.better__submenu-item[data-subnum="0"]').addClass('better__submenu-item--active');
     targetSlider.slick('refresh');
+  }
+});
+$('.better__submenu-item').click(function (evt) {
+  if ($(this).hasClass('better__submenu-item--active')) {
+    return;
+  } else {
+    var submenuItem = $(this).data().subnum;
+    $('.better').find('.better__slider--active').slick('slickGoTo', submenuItem);
+    $('.better').find('.better__submenu-item--active').removeClass('better__submenu-item--active');
+    $(this).addClass('better__submenu-item--active');
   }
 });

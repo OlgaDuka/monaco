@@ -196,22 +196,13 @@
   padding: 5px;
   width: 80vw;
   outline: none;
-
-  @include tablet {
-    width: 90vw;
-  }
 }
 
 .better__item {
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-
-  @include tablet {
-    picture {
-      object-fit: cover;
-    }
-  }
 
   @include desktop {
     align-items: flex-start;
@@ -230,9 +221,9 @@
   margin-top: 20px;
   width: 100%;
 
-  @include tablet {
-    width: 570px;
-  }
+  //@include tablet {
+  //  width: 570px;
+  //}
 
   @include desktop {
     width: 690px;
@@ -250,14 +241,6 @@
 }
 
 .better__image {
-  width: 100%;
-  //max-width: 570px;
-  height: auto;
-
-  @include tablet {
-    width: 570px;
-  }
-
   @include desktop {
     width: 690px;
   }

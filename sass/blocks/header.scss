@@ -9,7 +9,7 @@
   background-repeat: no-repeat, no-repeat, no-repeat;
   background-size: cover, auto, cover;
   animation: animatedMonacoMobile 4s;
-  background-position: center bottom, center top 135px, center bottom;
+  background-position: center top, center top 130px, center top;
 
   @include retina(2) {
     background-image: url("../img/bg_main_mobile@2x.jpg");
@@ -22,7 +22,7 @@
   @include tablet {
     min-height: 100vh;
     background-image: url('../img/bg_house_tablet.png'), url('../img/bg_monaco_tablet.png'), url('../img/bg_main_tablet.jpg');
-    background-position: center bottom, center bottom 53vh, center bottom;
+    background-position: center top, center top 23vh, center top;
     background-size: cover, contain, cover;
     animation: animatedMonacoTablet 5s;
 
@@ -54,42 +54,42 @@
 
 @keyframes animatedMonacoMobile {
   from {
-    background-position: center bottom, center bottom -20vh, center bottom;
+    background-position: center top, center top 200px, center top;
     animation-timing-function: ease-in;
   }
   50% {
-    background-position: center bottom, center top 50px, center bottom;
+    background-position: center top, center top 50px, center top;
     animation-timing-function: ease-out;
   }
-  to {
-    background-position: center bottom, center top 135px, center bottom;
+  100% {
+    background-position: center top, center top 130px, center top;
   }
 }
 
 @keyframes animatedMonacoTablet {
   from {
-    background-position: center bottom, center bottom -20vh, center bottom;
+    background-position: center top, center top 45vh, center top;
     animation-timing-function: ease-in;
   }
   50% {
-    background-position: center bottom, center bottom 68vh, center bottom;
+    background-position: center top, center top 10vh, center top;
     animation-timing-function: ease-out;
   }
-  to {
-    background-position: center bottom, center bottom 53vh, center bottom;
+  100% {
+    background-position: center top, center top 23vh, center top;
   }
 }
 
 @keyframes animatedMonacoDesktop {
   from {
-    background-position: center bottom, center bottom -20vh, center bottom;
+    background-position: center bottom, center bottom 25vh, center bottom;
     animation-timing-function: ease-in;
   }
   50% {
     background-position: center bottom, center bottom 70vh, center bottom;
     animation-timing-function: ease-out;
   }
-  to {
+  100% {
     background-position: center bottom, center bottom 51vh, center bottom;
   }
 }

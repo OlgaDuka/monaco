@@ -60,7 +60,6 @@ $('.stop__slider').slick({
 $('.details__slider-for').slick({
   slidesToShow: 1,
   slidesToScroll: 1,
-  initialSlide: 2,
   centerMode: false,
   dots: true,
   arrows: false,
@@ -73,6 +72,16 @@ $('.details__slider-for').slick({
         centerMode: true,
         variableWidth: true
       }
+    },
+    { breakpoint: DESKTOP_WIDTH,
+      settings: {
+        slidesToShow: 1,
+        centerMode: true,
+        variableWidth: true,
+        arrows: true,
+        prevArrow: $('.details__arrow--prev'),
+        nextArrow: $('.details__arrow--next')
+      }
     }
   ]
 });
@@ -80,8 +89,8 @@ $('.details__slider-for').slick({
 $('.details__slider-nav').slick({
   slidesToShow: 4,
   slidesToScroll: 1,
-  initialSlide: 2,
   dots: false,
+  arrows: false,
   asNavFor: '.details__slider-for',
   focusOnSelect: true,
   variableWidth: true,
@@ -95,6 +104,8 @@ $('.details__slider-nav').slick({
     }
   ]
 });
+
+$('.details__slider-for').slick('slickGoTo', 2);
 
 // Параметры слайдеров достопримечательностей
 const setSlickParameters = function(arrowPrev, arrowNext) {
@@ -110,12 +121,15 @@ const setSlickParameters = function(arrowPrev, arrowNext) {
     responsive: [
       { breakpoint: TABLET_WIDTH,
         settings: {
-          centerMode: false
+          variableWidth: true,
+          centerMode: true
         }
       },
       { breakpoint: DESKTOP_WIDTH,
         settings: {
-          slidesToShow: 1,
+          variableWidth: true,
+          centerMode: false,
+          slidesToShow: 2,
         }
       }
     ]
@@ -123,15 +137,15 @@ const setSlickParameters = function(arrowPrev, arrowNext) {
   return slickParameters;
 };
 
-const better1 = setSlickParameters('.better__arrow--prev1', '.better__arrow--next1');
-const better2 = setSlickParameters('.better__arrow--prev2', '.better__arrow--next2');
-const better3 = setSlickParameters('.better__arrow--prev3', '.better__arrow--next3');
-const better4 = setSlickParameters('.better__arrow--prev4', '.better__arrow--next4');
+for (let i = 1; i <= 4; i++) {
+  const nameSlider = `.better__slider--${i}`;
+  const parameters = setSlickParameters(`.better__arrow--prev${i}`, `.better__arrow--next${i}`);
+  $(nameSlider).slick(parameters);
+  $(nameSlider).find('.better__wrap-text').hide();
+  $(nameSlider).find('.better__wrap-text[data-text="0"]').show();
+  $(nameSlider).on('beforeChange', beforeChangeHandler); // Добавляет слушатель смены слайда
+}
 
-$('.better__slider--1').slick(better1);
-$('.better__slider--2').slick(better2);
-$('.better__slider--3').slick(better3);
-$('.better__slider--4').slick(better4);
 $('.better__menu-item[data-num="1"]').find('.better__submenu-item[data-subnum="0"]').addClass('better__submenu-item--active');
 
 const toggleSubmenu = function(numCurrentSlide, numNextSlide, numSlider) {
@@ -142,6 +156,11 @@ const toggleSubmenu = function(numCurrentSlide, numNextSlide, numSlider) {
 // Срабатывает до смены слайда в слайдере
 function beforeChangeHandler(event, slick, currentSlide, nextSlide) {
   const numSlider = slick.$slider.data().num;
+  const targetSlider = $('.better__slider[data-num="' + numSlider + '"]');
+  targetSlider.find('.better__title[data-title="' + currentSlide + '"]').hide();
+  targetSlider.find('.better__title[data-title="' + nextSlide + '"]').show();
+  targetSlider.find('.better__wrap-text[data-text="' + currentSlide + '"]').hide();
+  targetSlider.find('.better__wrap-text[data-text="' + nextSlide + '"]').show();
   toggleSubmenu(currentSlide, nextSlide, numSlider);
 }
 

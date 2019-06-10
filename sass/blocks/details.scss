@@ -29,7 +29,7 @@
   }
 
   @include desktop {
-    width: 320px;
+    width: 700px;
     margin-bottom: 38px;
   }
 }
@@ -53,9 +53,6 @@
 .details__container {
   outline: none;
   cursor: pointer;
-  @include tablet {
-
-  }
 }
 
 .details__item {
@@ -220,6 +217,10 @@
   @include tablet {
     height: 500px;
   }
+
+  @include desktop {
+    position: relative;
+  }
 }
 
 .details__slider-nav .slick-current .details__item-mini::before {
@@ -231,6 +232,12 @@
 
   @include tablet {
     background-size: 90px 90px;
+  }
+}
+
+.details__slider-nav .slick-track {
+  @include tablet {
+    transform: none!important;
   }
 }
 
@@ -283,5 +290,25 @@
 
   @include desktop {
     margin-bottom: 20px;
+  }
+}
+
+.details__controls {
+  position: relative;
+}
+
+.details__arrow {
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  bottom: 230px;
+  cursor: pointer;
+
+  &--prev {
+    left: calc((100vw - 990px - 230px) / 2);
+  }
+
+  &--next {
+    right: calc((100vw - 990px - 230px) / 2);
   }
 }

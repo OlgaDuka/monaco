@@ -7,16 +7,16 @@
   background-color: $bg-gray;
   background-image: url('../img/bg_house_mobile.png'), url('../img/bg_monaco_mobile.png'), url('../img/bg_main_mobile.jpg');
   background-repeat: no-repeat, no-repeat, no-repeat;
-  background-size: cover, auto, cover;
+  background-size: cover, contain, cover;
   animation: animatedMonacoMobile 4s;
   background-position: center top, center top 130px, center top;
 
   @include retina(2) {
-    background-image: url("../img/bg_main_mobile@2x.jpg");
+    background-image: url('../img/bg_house_mobile@2x.png'), url('../img/bg_monaco_mobile@2x.png'), url("../img/bg_main_mobile@2x.jpg");
   }
 
   @include retina(3) {
-    background-image: url("../img/bg_main_mobile@3x.jpg");
+    background-image: url('../img/bg_house_mobile@3x.png'), url('../img/bg_monaco_mobile@3x.png'), url("../img/bg_main_mobile@3x.jpg");
   }
 
   @include tablet {
@@ -27,11 +27,11 @@
     animation: animatedMonacoTablet 5s;
 
     @include retina(2) {
-      background-image: url('../img/bg_house_tablet@x2.png'), url('../img/bg_monaco_tablet@x2.png'), url("../img/bg_main_tablet@2x.jpg");
+      background-image: url('../img/bg_house_tablet@2x.png'), url('../img/bg_monaco_tablet@2x.png'), url("../img/bg_main_tablet@2x.jpg");
     }
 
     @include retina(3) {
-      background-image: url('../img/bg_house_tablet@x3.png'), url('../img/bg_monaco_tablet@x3.png'), url("../img/bg_main_tablet@3x.jpg");
+      background-image: url('../img/bg_house_tablet@3x.png'), url('../img/bg_monaco_tablet@3x.png'), url("../img/bg_main_tablet@3x.jpg");
     }
   }
 

@@ -1353,7 +1353,7 @@ input[type=tel] {
       font-weight: 400; } }
   @media (min-width: 1200px) {
     .better__caption {
-      width: 600px; } }
+      width: 360px; } }
 
 .better__wrapper {
   width: 100%; }
@@ -1521,13 +1521,15 @@ input[type=tel] {
 .better__slider {
   display: none; }
   .better__slider--active {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex; }
+    display: block; }
 
 .better__container {
   padding: 5px;
+  width: 80vw;
   outline: none; }
+  @media (min-width: 768px) {
+    .better__container {
+      width: 90vw; } }
 
 .better__item {
   display: -webkit-box;
@@ -1540,6 +1542,10 @@ input[type=tel] {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center; }
+  @media (min-width: 768px) {
+    .better__item picture {
+      -o-object-fit: cover;
+         object-fit: cover; } }
   @media (min-width: 1200px) {
     .better__item {
       -webkit-box-align: start;
@@ -1558,7 +1564,8 @@ input[type=tel] {
   text-align: center; }
 
 .better__wrap-text {
-  margin-top: 20px; }
+  margin-top: 20px;
+  width: 100%; }
   @media (min-width: 768px) {
     .better__wrap-text {
       width: 570px; } }
@@ -1579,7 +1586,7 @@ input[type=tel] {
   color: #e9ab78; }
 
 .better__image {
-  width: 280px;
+  width: 100%;
   height: auto; }
   @media (min-width: 768px) {
     .better__image {
@@ -1660,7 +1667,6 @@ input[type=tel] {
       font-weight: 400; } }
   @media (min-width: 1200px) {
     .details__caption {
-      width: 700px;
       margin-bottom: 38px; } }
 
 .details__slider-nav {
@@ -2243,7 +2249,7 @@ input[type=tel] {
       position: relative; } }
   @media (min-width: 1200px) {
     .instagram {
-      height: 435px;
+      height: 335px;
       margin-bottom: 120px; } }
 
 .instagram__wrap {
@@ -2993,8 +2999,8 @@ input[type=tel] {
       margin-bottom: 150px; } }
 
 .stop__caption {
-  margin-top: 10px;
-  margin-bottom: 22px;
+  margin: 10px auto 22px;
+  width: 270px;
   text-align: center;
   color: #252525;
   font-family: "PlayfairDisplayRegular", Arial, sans-serif;
@@ -3260,6 +3266,7 @@ input[type=tel] {
 .transport__caption {
   margin: 0 auto;
   margin-bottom: 20px;
+  width: 250px;
   color: #252525;
   font-family: "PlayfairDisplayRegular", Arial, sans-serif;
   font-size: 30px;
@@ -3281,7 +3288,7 @@ input[type=tel] {
   @media (min-width: 1200px) {
     .transport__caption {
       margin-bottom: 42px;
-      width: 700px; } }
+      width: 400px; } }
 
 @media (min-width: 1200px) {
   .transport__slider {

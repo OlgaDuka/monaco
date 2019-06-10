@@ -20,8 +20,8 @@
 }
 
 .stop__caption {
-  margin-top: 10px;
-  margin-bottom: 22px;
+  margin: 10px auto 22px;
+  width: 270px;
   text-align: center;
   color: $title-dark;
   @include second-font-reg(30px, 40px, 0.1px);

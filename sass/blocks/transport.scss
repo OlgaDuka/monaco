@@ -19,6 +19,7 @@
 .transport__caption {
   margin: 0 auto;
   margin-bottom: 20px;
+  width: 250px;
   color: $title-dark;
   @include second-font-reg(30px, 40px, 0.1px);
   text-align: center;
@@ -35,7 +36,7 @@
 
   @include desktop {
     margin-bottom: 42px;
-    width: 700px;
+    width: 400px;
   }
 }
 

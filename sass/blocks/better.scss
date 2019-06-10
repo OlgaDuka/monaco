@@ -36,7 +36,7 @@
   }
 
   @include desktop {
-    width: 600px;
+    width: 360px;
   }
 }
 
@@ -188,19 +188,30 @@
   display: none;
 
   &--active {
-    display: flex;
+    display: block;
   }
 }
 
 .better__container {
   padding: 5px;
+  width: 80vw;
   outline: none;
+
+  @include tablet {
+    width: 90vw;
+  }
 }
 
 .better__item {
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  @include tablet {
+    picture {
+      object-fit: cover;
+    }
+  }
 
   @include desktop {
     align-items: flex-start;
@@ -217,6 +228,7 @@
 
 .better__wrap-text {
   margin-top: 20px;
+  width: 100%;
 
   @include tablet {
     width: 570px;
@@ -238,7 +250,8 @@
 }
 
 .better__image {
-  width: 280px;
+  width: 100%;
+  //max-width: 570px;
   height: auto;
 
   @include tablet {

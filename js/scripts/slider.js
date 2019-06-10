@@ -114,6 +114,7 @@ const setSlickParameters = function(arrowPrev, arrowNext) {
     infinite: true,
     slidesToShow: 1,
     slidesToScroll: 1,
+    centerMode: true,
     variableWidth: true,
     dots: false,
     prevArrow: $(arrowPrev),
@@ -121,6 +122,7 @@ const setSlickParameters = function(arrowPrev, arrowNext) {
     responsive: [
       { breakpoint: TABLET_WIDTH,
         settings: {
+          slidesToShow: 1,
           variableWidth: true,
           centerMode: true
         }
@@ -129,7 +131,7 @@ const setSlickParameters = function(arrowPrev, arrowNext) {
         settings: {
           variableWidth: true,
           centerMode: false,
-          slidesToShow: 2,
+          slidesToShow: 2
         }
       }
     ]

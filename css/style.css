@@ -1992,16 +1992,16 @@ input[type=tel] {
   background-color: #cecece;
   background-image: url("../img/bg_house_mobile.png"), url("../img/bg_monaco_mobile.png"), url("../img/bg_main_mobile.jpg");
   background-repeat: no-repeat, no-repeat, no-repeat;
-  background-size: cover, auto, cover;
+  background-size: cover, contain, cover;
   -webkit-animation: animatedMonacoMobile 4s;
           animation: animatedMonacoMobile 4s;
   background-position: center top, center top 130px, center top; }
   @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
     .header {
-      background-image: url("../img/bg_main_mobile@2x.jpg"); } }
+      background-image: url("../img/bg_house_mobile@2x.png"), url("../img/bg_monaco_mobile@2x.png"), url("../img/bg_main_mobile@2x.jpg"); } }
   @media (-webkit-min-device-pixel-ratio: 3), (min-resolution: 288dpi), (min-resolution: 3dppx) {
     .header {
-      background-image: url("../img/bg_main_mobile@3x.jpg"); } }
+      background-image: url("../img/bg_house_mobile@3x.png"), url("../img/bg_monaco_mobile@3x.png"), url("../img/bg_main_mobile@3x.jpg"); } }
   @media (min-width: 768px) {
     .header {
       min-height: 100vh;
@@ -2012,10 +2012,10 @@ input[type=tel] {
               animation: animatedMonacoTablet 5s; } }
   @media (min-width: 768px) and (-webkit-min-device-pixel-ratio: 1.5), (min-width: 768px) and (min-resolution: 144dpi), (min-width: 768px) and (min-resolution: 1.5dppx) {
     .header {
-      background-image: url("../img/bg_house_tablet@x2.png"), url("../img/bg_monaco_tablet@x2.png"), url("../img/bg_main_tablet@2x.jpg"); } }
+      background-image: url("../img/bg_house_tablet@2x.png"), url("../img/bg_monaco_tablet@2x.png"), url("../img/bg_main_tablet@2x.jpg"); } }
   @media (min-width: 768px) and (-webkit-min-device-pixel-ratio: 3), (min-width: 768px) and (min-resolution: 288dpi), (min-width: 768px) and (min-resolution: 3dppx) {
     .header {
-      background-image: url("../img/bg_house_tablet@x3.png"), url("../img/bg_monaco_tablet@x3.png"), url("../img/bg_main_tablet@3x.jpg"); } }
+      background-image: url("../img/bg_house_tablet@3x.png"), url("../img/bg_monaco_tablet@3x.png"), url("../img/bg_main_tablet@3x.jpg"); } }
   @media (min-width: 1200px) {
     .header {
       min-height: 100vh;

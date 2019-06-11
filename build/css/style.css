@@ -1527,6 +1527,9 @@ input[type=tel] {
   padding: 5px;
   width: 80vw;
   outline: none; }
+  @media (min-width: 768px) {
+    .better__container {
+      width: 70vw; } }
 
 .better__item {
   width: 100%;
@@ -1555,11 +1558,30 @@ input[type=tel] {
   line-height: 30px;
   letter-spacing: 0.4px;
   font-weight: 400;
-  text-align: center; }
+  text-align: center;
+  height: 60px; }
+  @media (min-width: 410px) {
+    .better__title {
+      height: 30px;
+      font-family: "PlayfairDisplayRegular", Arial, sans-serif;
+      font-size: 20px;
+      line-height: 30px;
+      letter-spacing: 0.4px;
+      font-weight: 400; } }
+  @media (min-width: 500px) {
+    .better__title {
+      font-family: "PlayfairDisplayRegular", Arial, sans-serif;
+      font-size: 24px;
+      line-height: 30px;
+      letter-spacing: 0.4px;
+      font-weight: 400; } }
 
 .better__wrap-text {
   margin-top: 20px;
   width: 100%; }
+  @media (min-width: 768px) {
+    .better__wrap-text {
+      width: 570px; } }
   @media (min-width: 1200px) {
     .better__wrap-text {
       width: 690px;
@@ -1575,6 +1597,10 @@ input[type=tel] {
 
 .better__price {
   color: #e9ab78; }
+
+@media (min-width: 768px) {
+  .better__image {
+    width: 570px; } }
 
 @media (min-width: 1200px) {
   .better__image {
@@ -1602,7 +1628,7 @@ input[type=tel] {
   @media (min-width: 1200px) {
     .better__controls {
       width: 10%;
-      left: 50%; } }
+      left: 60%; } }
 
 .better__arrow {
   width: 10px;
@@ -1979,25 +2005,35 @@ input[type=tel] {
   width: 100%;
   min-height: 580px;
   height: auto;
-  padding-bottom: 50px;
+  padding-bottom: 0;
   background-color: #cecece;
   background-image: url("../img/bg_house_mobile.png"), url("../img/bg_monaco_mobile.png"), url("../img/bg_main_mobile.jpg");
   background-repeat: no-repeat, no-repeat, no-repeat;
   background-size: cover, contain, cover;
-  -webkit-animation: animatedMonacoMobile 4s;
-          animation: animatedMonacoMobile 4s;
-  background-position: center top, center top 130px, center top; }
+  -webkit-animation: animatedMonacoMobile1 4s;
+          animation: animatedMonacoMobile1 4s;
+  background-position: center top, center top 115px, center top; }
   @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
     .header {
       background-image: url("../img/bg_house_mobile@2x.png"), url("../img/bg_monaco_mobile@2x.png"), url("../img/bg_main_mobile@2x.jpg"); } }
   @media (-webkit-min-device-pixel-ratio: 3), (min-resolution: 288dpi), (min-resolution: 3dppx) {
     .header {
       background-image: url("../img/bg_house_mobile@3x.png"), url("../img/bg_monaco_mobile@3x.png"), url("../img/bg_main_mobile@3x.jpg"); } }
+  @media (min-width: 360px) {
+    .header {
+      background-position: center top, center top 130px, center top;
+      -webkit-animation: animatedMonacoMobile2 4s;
+              animation: animatedMonacoMobile2 4s; } }
+  @media (min-width: 480px) {
+    .header {
+      background-position: center top, center top 175px, center top;
+      -webkit-animation: animatedMonacoMobile3 4s;
+              animation: animatedMonacoMobile3 4s; } }
   @media (min-width: 768px) {
     .header {
       min-height: 100vh;
       background-image: url("../img/bg_house_tablet.png"), url("../img/bg_monaco_tablet.png"), url("../img/bg_main_tablet.jpg");
-      background-position: center top, center top 23vh, center top;
+      background-position: center top, center top 27vh, center top;
       background-size: cover, contain, cover;
       -webkit-animation: animatedMonacoTablet 5s;
               animation: animatedMonacoTablet 5s; } }
@@ -2022,7 +2058,31 @@ input[type=tel] {
     .header {
       background-image: url("../img/bg_house@3x.png"), url("../img/bg_monaco@3x.png"), url("../img/bg_main@3x.jpg"); } }
 
-@-webkit-keyframes animatedMonacoMobile {
+@-webkit-keyframes animatedMonacoMobile1 {
+  from {
+    background-position: center top, center top 200px, center top;
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in; }
+  50% {
+    background-position: center top, center top 50px, center top;
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out; }
+  100% {
+    background-position: center top, center top 115px, center top; } }
+
+@keyframes animatedMonacoMobile1 {
+  from {
+    background-position: center top, center top 200px, center top;
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in; }
+  50% {
+    background-position: center top, center top 50px, center top;
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out; }
+  100% {
+    background-position: center top, center top 115px, center top; } }
+
+@-webkit-keyframes animatedMonacoMobile2 {
   from {
     background-position: center top, center top 200px, center top;
     -webkit-animation-timing-function: ease-in;
@@ -2034,7 +2094,7 @@ input[type=tel] {
   100% {
     background-position: center top, center top 130px, center top; } }
 
-@keyframes animatedMonacoMobile {
+@keyframes animatedMonacoMobile2 {
   from {
     background-position: center top, center top 200px, center top;
     -webkit-animation-timing-function: ease-in;
@@ -2045,10 +2105,34 @@ input[type=tel] {
             animation-timing-function: ease-out; }
   100% {
     background-position: center top, center top 130px, center top; } }
+
+@-webkit-keyframes animatedMonacoMobile3 {
+  from {
+    background-position: center top, center top 300px, center top;
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in; }
+  50% {
+    background-position: center top, center top 50px, center top;
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out; }
+  100% {
+    background-position: center top, center top 175px, center top; } }
+
+@keyframes animatedMonacoMobile3 {
+  from {
+    background-position: center top, center top 300px, center top;
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in; }
+  50% {
+    background-position: center top, center top 50px, center top;
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out; }
+  100% {
+    background-position: center top, center top 175px, center top; } }
 
 @-webkit-keyframes animatedMonacoTablet {
   from {
-    background-position: center top, center top 45vh, center top;
+    background-position: center top, center top 50vh, center top;
     -webkit-animation-timing-function: ease-in;
             animation-timing-function: ease-in; }
   50% {
@@ -2056,11 +2140,11 @@ input[type=tel] {
     -webkit-animation-timing-function: ease-out;
             animation-timing-function: ease-out; }
   100% {
-    background-position: center top, center top 23vh, center top; } }
+    background-position: center top, center top 27vh, center top; } }
 
 @keyframes animatedMonacoTablet {
   from {
-    background-position: center top, center top 45vh, center top;
+    background-position: center top, center top 50vh, center top;
     -webkit-animation-timing-function: ease-in;
             animation-timing-function: ease-in; }
   50% {
@@ -2068,11 +2152,11 @@ input[type=tel] {
     -webkit-animation-timing-function: ease-out;
             animation-timing-function: ease-out; }
   100% {
-    background-position: center top, center top 23vh, center top; } }
+    background-position: center top, center top 27vh, center top; } }
 
 @-webkit-keyframes animatedMonacoDesktop {
   from {
-    background-position: center bottom, center bottom 25vh, center bottom;
+    background-position: center bottom, center bottom 33vh, center bottom;
     -webkit-animation-timing-function: ease-in;
             animation-timing-function: ease-in; }
   50% {
@@ -2084,7 +2168,7 @@ input[type=tel] {
 
 @keyframes animatedMonacoDesktop {
   from {
-    background-position: center bottom, center bottom 25vh, center bottom;
+    background-position: center bottom, center bottom 33vh, center bottom;
     -webkit-animation-timing-function: ease-in;
             animation-timing-function: ease-in; }
   50% {
@@ -2133,7 +2217,7 @@ input[type=tel] {
 
 .header__logo-wrapper {
   margin-top: 13px;
-  margin-bottom: 25vh;
+  margin-bottom: 28vh;
   width: 100%;
   height: 30px;
   display: -webkit-box;
@@ -2142,9 +2226,12 @@ input[type=tel] {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between; }
+  @media (min-width: 380px) {
+    .header__logo-wrapper {
+      margin-bottom: 32vh; } }
   @media (min-width: 768px) {
     .header__logo-wrapper {
-      margin-bottom: 42vh; } }
+      margin-bottom: 46vh; } }
   @media (min-width: 1200px) {
     .header__logo-wrapper {
       margin-bottom: 40vh;
@@ -2802,6 +2889,9 @@ input[type=tel] {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 288px;
   height: 60px;
   padding-top: 6px;

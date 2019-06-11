@@ -196,6 +196,10 @@
   padding: 5px;
   width: 80vw;
   outline: none;
+
+  @include tablet {
+    width: 70vw;
+  }
 }
 
 .better__item {
@@ -215,15 +219,25 @@
   color: $title-dark;
   @include second-font-reg(24px, 30px);
   text-align: center;
+  height: 60px;
+
+  @media (min-width: 410px) {
+    height: 30px;
+    @include second-font-reg(20px, 30px);
+  }
+
+  @media (min-width: 500px) {
+    @include second-font-reg(24px, 30px);
+  }
 }
 
 .better__wrap-text {
   margin-top: 20px;
   width: 100%;
 
-  //@include tablet {
-  //  width: 570px;
-  //}
+  @include tablet {
+    width: 570px;
+  }
 
   @include desktop {
     width: 690px;
@@ -241,6 +255,10 @@
 }
 
 .better__image {
+  @include tablet {
+    width: 570px;
+  }
+
   @include desktop {
     width: 690px;
   }
@@ -266,7 +284,7 @@
 
   @include desktop {
     width: 10%;
-    left: 50%;
+    left: 60%;
   }
 }
 

@@ -359,7 +359,7 @@ var setSlickParameters = function setSlickParameters(arrowPrev, arrowNext) {
   var slickParameters = {
     mobileFirst: true,
     infinite: true,
-    slidesToShow: 1,
+    slidesToShow: 2,
     slidesToScroll: 1,
     centerMode: true,
     variableWidth: true,
@@ -367,13 +367,6 @@ var setSlickParameters = function setSlickParameters(arrowPrev, arrowNext) {
     prevArrow: $(arrowPrev),
     nextArrow: $(arrowNext),
     responsive: [{
-      breakpoint: TABLET_WIDTH,
-      settings: {
-        slidesToShow: 1,
-        variableWidth: true,
-        centerMode: true
-      }
-    }, {
       breakpoint: DESKTOP_WIDTH,
       settings: {
         variableWidth: true,

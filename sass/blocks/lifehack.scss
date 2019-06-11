@@ -15,7 +15,7 @@
 
   @include desktop {
     margin-bottom: 0px;
-    height: 1380px;
+    height: 1377px;
     background-image: url('../img/bg_lifehack.jpg');
   }
 }
@@ -78,11 +78,12 @@
   }
 
   @include desktop {
-    width: 550px;
+    width: 570px;
     padding-top: 0;
+    justify-content: space-between;
 
     &:nth-child(odd) {
-      margin-right: 50px;
+      margin-right: 40px;
     }
   }
 }

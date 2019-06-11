@@ -1,19 +1,3 @@
-/*const tabletWidth = window.matchMedia("(min-width: 768px)");
-const desktopWidth = window.matchMedia("(min-width: 1200px)");
-const desktopWidthMax = window.matchMedia("(min-width: 1920px)");
-
-let limitImages = 9;
-
-if (desktopWidthMax.matches) {
-    limitImages = 16;
-  } else if (desktopWidth.matches) {
-    limitImages = 12;
-  } else if (tabletWidth.matches) {
-    limitImages = 10;
-  } else {
-    limitImages = 9;
-  } */
-
 const feed = new Instafeed({
   get: 'user',
   userId: 14110486070,

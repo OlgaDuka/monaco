@@ -1,6 +1,11 @@
 const TABLET_WIDTH = 768 - 1;
 const DESKTOP_WIDTH = 1190 - 1;
 
+(window.onload = function() {
+  $(window).scrollTop(0);
+});
+
+
 $('.lazy').slick({
   lazyLoad: 'progressive'
 });
@@ -110,6 +115,7 @@ $('.details__slider-nav').slick({
 });
 
 $('.details__slider-for').slick('slickGoTo', 2);
+$('.details').show();
 
 // Параметры слайдеров достопримечательностей
 const setSlickParameters = function(arrowPrev, arrowNext) {

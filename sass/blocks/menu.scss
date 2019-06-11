@@ -7,18 +7,15 @@
 }
 
 .menu__list {
-  width: 635px;
+  margin-right: 65px;
+  width: 620px;
   height: 18px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.menu__item {
-
-}
-
 .menu__link {
-  @include font_medium(15px, 18px);
+  @include font_medium(15px, 18px, 0.1px);
   @include underline-appear-hover (1px, 0, $white, $white);
 }

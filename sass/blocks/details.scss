@@ -1,4 +1,5 @@
 .details {
+  display: none;
   margin-bottom: 100px;
 
   @include tablet {
@@ -6,7 +7,7 @@
   }
 
   @include desktop {
-    margin-bottom: 167px;
+    margin-bottom: 100px;
   }
 }
 
@@ -45,13 +46,12 @@
 
   @include desktop {
     width: 600px;
-    height: 95px;
+    height: 90px;
   }
 }
 
 .details__container {
   outline: none;
-  cursor: pointer;
 }
 
 .details__item {
@@ -67,7 +67,8 @@
   }
 
   @include desktop {
-    width: 990px;
+    width: 790px;
+    height: 450px;
   }
 }
 
@@ -79,6 +80,10 @@
 
 .details_image {
   margin: 0 auto;
+
+  @include desktop {
+    height: 450px;
+  }
 }
 
 .details__legend {
@@ -219,6 +224,7 @@
 
   @include desktop {
     position: relative;
+    height: 450px;
   }
 }
 
@@ -300,7 +306,7 @@
   width: 60px;
   height: 60px;
   position: absolute;
-  bottom: 230px;
+  bottom: 200px;
   cursor: pointer;
 
   &--prev {

@@ -33,8 +33,8 @@
   }
 
   @include desktop {
-    min-height: 100vh;
-    padding-top: 320px;
+    height: 800px;
+    padding-top: 300px;
     background-image: url('../img/bg_footer.jpg');
     background-size: cover;
 
@@ -66,5 +66,11 @@
     margin-bottom: 40px;
     width: $desktop-content-width;
     @include second-font-bold(60px, 80px);
+  }
+}
+
+.footer__search {
+  @include desktop {
+    margin-bottom: 500px;
   }
 }

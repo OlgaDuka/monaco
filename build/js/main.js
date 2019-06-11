@@ -218,22 +218,6 @@ function makeForm(selection) {
     // console.log(compareString)
   });
 }
-/*const tabletWidth = window.matchMedia("(min-width: 768px)");
-const desktopWidth = window.matchMedia("(min-width: 1200px)");
-const desktopWidthMax = window.matchMedia("(min-width: 1920px)");
-
-let limitImages = 9;
-
-if (desktopWidthMax.matches) {
-    limitImages = 16;
-  } else if (desktopWidth.matches) {
-    limitImages = 12;
-  } else if (tabletWidth.matches) {
-    limitImages = 10;
-  } else {
-    limitImages = 9;
-  } */
-
 
 var feed = new Instafeed({
   get: 'user',
@@ -245,26 +229,13 @@ var feed = new Instafeed({
   template: '<li><img src="{{image}}" /></li>'
 });
 feed.run();
-var limit = $(window).height() / 4;
-var backToTop = $('#up-btn'); // Appearing and disappearing of the 'up' button on the first screen
-// and fixed menu on top screen
-
-$(window).scroll(function () {
-  if ($(this).scrollTop() > limit) {
-    backToTop.fadeIn();
-  } else {
-    backToTop.fadeOut();
-  }
-}); // Soft scroll to the top
-
-backToTop.click(function () {
-  $('body, html').animate({
-    scrollTop: 0
-  }, 100);
-  return false;
-});
 var TABLET_WIDTH = 768 - 1;
 var DESKTOP_WIDTH = 1190 - 1;
+
+window.onload = function () {
+  $(window).scrollTop(0);
+};
+
 $('.lazy').slick({
   lazyLoad: 'progressive'
 });
@@ -356,7 +327,8 @@ $('.details__slider-nav').slick({
     }
   }]
 });
-$('.details__slider-for').slick('slickGoTo', 2); // Параметры слайдеров достопримечательностей
+$('.details__slider-for').slick('slickGoTo', 2);
+$('.details').show(); // Параметры слайдеров достопримечательностей
 
 var setSlickParameters = function setSlickParameters(arrowPrev, arrowNext) {
   var slickParameters = {

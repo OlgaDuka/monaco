@@ -265,6 +265,9 @@ backToTop.click(function () {
 });
 var TABLET_WIDTH = 768 - 1;
 var DESKTOP_WIDTH = 1190 - 1;
+$('.lazy').slick({
+  lazyLoad: 'progressive'
+});
 $('.advantages__slider').slick({
   slidesToShow: 1,
   slidesToScroll: 1,

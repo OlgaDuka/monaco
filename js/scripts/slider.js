@@ -1,6 +1,10 @@
 const TABLET_WIDTH = 768 - 1;
 const DESKTOP_WIDTH = 1190 - 1;
 
+$('.lazy').slick({
+  lazyLoad: 'progressive'
+});
+
 $('.advantages__slider').slick({
   slidesToShow: 1,
   slidesToScroll: 1,

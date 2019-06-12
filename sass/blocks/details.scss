@@ -172,6 +172,7 @@
   border-radius: 50%;
   background-image: url('../img/nav_0.jpg');
   position: relative;
+  cursor: pointer;
 
   &--1 {
     background-image: url('../img/nav_1.jpg');
@@ -299,7 +300,12 @@
 }
 
 .details__controls {
-  position: relative;
+  display: none;
+
+  @include desktop {
+    display: block;
+    position: relative;
+  }
 }
 
 .details__arrow {

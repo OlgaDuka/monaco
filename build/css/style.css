@@ -1831,7 +1831,8 @@ input[type=tel] {
   outline: none;
   border-radius: 50%;
   background-image: url("../img/nav_0.jpg");
-  position: relative; }
+  position: relative;
+  cursor: pointer; }
   .details__item-mini--1 {
     background-image: url("../img/nav_1.jpg"); }
   .details__item-mini--2 {
@@ -1927,7 +1928,11 @@ input[type=tel] {
       margin-bottom: 20px; } }
 
 .details__controls {
-  position: relative; }
+  display: none; }
+  @media (min-width: 1200px) {
+    .details__controls {
+      display: block;
+      position: relative; } }
 
 .details__arrow {
   width: 60px;
@@ -2384,6 +2389,7 @@ input[type=tel] {
 .header__caption {
   margin-top: 5px;
   margin-bottom: 18px;
+  width: 100%;
   color: #ffffff;
   font-family: "RubikMedium", Arial, sans-serif;
   font-size: 18px;

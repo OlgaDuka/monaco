@@ -279,6 +279,7 @@
 .header__caption {
   margin-top: 5px;
   margin-bottom: 18px;
+  width: 100%;
   color: $white;
   @include font-medium(18px, 21px, 0.4px);
   text-align: center;

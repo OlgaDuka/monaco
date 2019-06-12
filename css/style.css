@@ -1086,7 +1086,7 @@ input[type=tel] {
   @media (min-width: 768px) {
     .advantages {
       min-height: 335px;
-      margin-bottom: 142px; } }
+      margin-bottom: 67px; } }
   @media (min-width: 1200px) {
     .advantages {
       padding-top: 27px;
@@ -1323,7 +1323,7 @@ input[type=tel] {
       padding-right: 0; } }
   @media (min-width: 768px) {
     .better {
-      margin-bottom: 132px; } }
+      margin-bottom: 30px; } }
   @media (min-width: 1200px) {
     .better {
       margin-bottom: 120px; } }
@@ -1652,7 +1652,7 @@ input[type=tel] {
   margin-bottom: 100px; }
   @media (min-width: 768px) {
     .details {
-      margin-bottom: 108px; } }
+      margin-bottom: 90px; } }
   @media (min-width: 1200px) {
     .details {
       margin-bottom: 100px; } }
@@ -2044,7 +2044,7 @@ input[type=tel] {
     .header {
       min-height: 100vh;
       background-image: url("../img/bg_house_tablet.png"), url("../img/bg_monaco_tablet.png"), url("../img/bg_main_tablet.jpg");
-      background-position: center top, center top 27vh, center top;
+      background-position: center top, center top 24vh, center top;
       background-size: cover, contain, cover;
       -webkit-animation: animatedMonacoTablet 5s;
               animation: animatedMonacoTablet 5s; } }
@@ -2054,6 +2054,11 @@ input[type=tel] {
   @media (min-width: 768px) and (-webkit-min-device-pixel-ratio: 3), (min-width: 768px) and (min-resolution: 288dpi), (min-width: 768px) and (min-resolution: 3dppx) {
     .header {
       background-image: url("../img/bg_house_tablet@3x.png"), url("../img/bg_monaco_tablet@3x.png"), url("../img/bg_main_tablet@3x.jpg"); } }
+  @media (min-width: 1024px) {
+    .header {
+      background-position: center top, center top 33vh, center top;
+      -webkit-animation: animatedMonacoTablet2 5s;
+              animation: animatedMonacoTablet2 5s; } }
   @media (min-width: 1200px) {
     .header {
       min-height: 100vh;
@@ -2165,6 +2170,30 @@ input[type=tel] {
   100% {
     background-position: center top, center top 27vh, center top; } }
 
+@-webkit-keyframes animatedMonacoTablet2 {
+  from {
+    background-position: center top, center top 60vh, center top;
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in; }
+  50% {
+    background-position: center top, center top 15vh, center top;
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out; }
+  100% {
+    background-position: center top, center top 33vh, center top; } }
+
+@keyframes animatedMonacoTablet2 {
+  from {
+    background-position: center top, center top 60vh, center top;
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in; }
+  50% {
+    background-position: center top, center top 15vh, center top;
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out; }
+  100% {
+    background-position: center top, center top 33vh, center top; } }
+
 @-webkit-keyframes animatedMonacoDesktop {
   from {
     background-position: center bottom, center bottom 33vh, center bottom;
@@ -2246,7 +2275,10 @@ input[type=tel] {
       margin-bottom: 32vh; } }
   @media (min-width: 768px) {
     .header__logo-wrapper {
-      margin-bottom: 46vh; } }
+      margin-bottom: 42vh; } }
+  @media (min-width: 1024px) {
+    .header__logo-wrapper {
+      margin-bottom: 55vh; } }
   @media (min-width: 1200px) {
     .header__logo-wrapper {
       margin-bottom: 42vh;
@@ -2324,7 +2356,11 @@ input[type=tel] {
 
 @media (min-width: 768px) {
   .header__search {
-    margin-bottom: 100px; } }
+    margin-bottom: 90px; } }
+
+@media (min-width: 1024px) {
+  .header__search {
+    margin-bottom: 30px; } }
 
 @media (min-width: 1200px) {
   .header__search {
@@ -2341,7 +2377,7 @@ input[type=tel] {
   overflow: hidden; }
   @media (min-width: 768px) {
     .instagram {
-      margin-bottom: 142px;
+      margin-bottom: 80px;
       position: relative; } }
   @media (min-width: 1200px) {
     .instagram {
@@ -2444,7 +2480,7 @@ input[type=tel] {
   overflow: hidden; }
   @media (min-width: 768px) {
     .lifehack {
-      margin-bottom: 44px;
+      margin-bottom: 30px;
       height: 1288px;
       background-image: url("../img/bg_lifehack_tablet.jpg"); } }
   @media (min-width: 1200px) {
@@ -3095,7 +3131,7 @@ input[type=tel] {
       -webkit-box-align: center;
           -ms-flex-align: center;
               align-items: center;
-      margin-bottom: 151px; } }
+      margin-bottom: 72px; } }
   @media (min-width: 1200px) {
     .stop {
       margin-bottom: 90px; } }
@@ -3367,7 +3403,7 @@ input[type=tel] {
       padding-right: 0; } }
   @media (min-width: 768px) {
     .transport {
-      margin-bottom: 155px; } }
+      margin-bottom: 100px; } }
   @media (min-width: 1200px) {
     .transport {
       margin-bottom: 75px;
@@ -3505,9 +3541,10 @@ input[type=tel] {
       left: -23px; } }
 
 .transport__note {
-  padding-left: 30px;
+  margin-top: 32px;
+  padding-left: 25px;
   font-family: "RubikRegular", Arial, sans-serif;
-  font-size: 12px;
+  font-size: 11px;
   line-height: 14px;
   letter-spacing: 0.4px;
   font-weight: 400;

@@ -32,7 +32,7 @@
   @include tablet {
     min-height: 100vh;
     background-image: url('../img/bg_house_tablet.png'), url('../img/bg_monaco_tablet.png'), url('../img/bg_main_tablet.jpg');
-    background-position: center top, center top 27vh, center top;
+    background-position: center top, center top 24vh, center top;
     background-size: cover, contain, cover;
     animation: animatedMonacoTablet 5s;
 
@@ -43,6 +43,11 @@
     @include retina(3) {
       background-image: url('../img/bg_house_tablet@3x.png'), url('../img/bg_monaco_tablet@3x.png'), url("../img/bg_main_tablet@3x.jpg");
     }
+  }
+
+  @media (min-width: 1024px) {
+    background-position: center top, center top 33vh, center top;
+    animation: animatedMonacoTablet2 5s;
   }
 
   @include desktop {
@@ -118,6 +123,20 @@
   }
 }
 
+@keyframes animatedMonacoTablet2 {
+  from {
+    background-position: center top, center top 60vh, center top;
+    animation-timing-function: ease-in;
+  }
+  50% {
+    background-position: center top, center top 15vh, center top;
+    animation-timing-function: ease-out;
+  }
+  100% {
+    background-position: center top, center top 33vh, center top;
+  }
+}
+
 @keyframes animatedMonacoDesktop {
   from {
     background-position: center bottom, center bottom 33vh, center bottom;
@@ -159,8 +178,12 @@
   }
 
   @include tablet {
-    margin-bottom: 46vh;
+    margin-bottom: 42vh;
   };
+
+  @media (min-width: 1024px) {
+    margin-bottom: 55vh;
+  }
 
   @include desktop {
     margin-bottom: 42vh;
@@ -233,7 +256,11 @@
 
 .header__search {
   @include tablet {
-    margin-bottom: 100px;
+    margin-bottom: 90px;
+  }
+
+  @media (min-width: 1024px) {
+    margin-bottom: 30px;
   }
 
   @include desktop {

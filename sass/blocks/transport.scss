@@ -3,7 +3,7 @@
   margin-bottom: 105px;
 
   @include tablet {
-    margin-bottom: 155px;
+    margin-bottom: 100px;
   }
 
   @include desktop {
@@ -128,7 +128,6 @@
   border-left: 1px dashed $border-gray;
 
   @include desktop {
-
     padding-left: 20px;
   }
 }
@@ -165,8 +164,9 @@
 }
 
 .transport__note {
-  padding-left: 30px;
-  @include font-reg(12px, 14px, 0.4px);
+  margin-top: 32px;
+  padding-left: 25px;
+  @include font-reg(11px, 14px, 0.4px);
   position: relative;
 
   &:before {

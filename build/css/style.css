@@ -1162,7 +1162,10 @@ input[type=tel] {
   border: 1px solid #eaeaea;
   border-radius: 50%;
   position: absolute;
-  top: 0; }
+  top: 0;
+  left: 50%;
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%); }
   @media (min-width: 768px) {
     .advantages__icon {
       margin-right: 0;
@@ -1457,6 +1460,7 @@ input[type=tel] {
       margin-right: 15px; } }
 
 .better__name {
+  width: 100%;
   height: 57px;
   color: #a5a5a5;
   font-family: "RubikMedium", Arial, sans-serif;
@@ -2651,13 +2655,14 @@ input[type=tel] {
     .lifehack__icon-image {
       top: 20px; } }
 
-@media (min-width: 768px) {
-  .lifehack__wrap {
-    width: 570px; } }
-
-@media (min-width: 1200px) {
-  .lifehack__wrap {
-    width: 450px; } }
+.lifehack__wrap {
+  max-width: 100%; }
+  @media (min-width: 768px) {
+    .lifehack__wrap {
+      width: 570px; } }
+  @media (min-width: 1200px) {
+    .lifehack__wrap {
+      width: 450px; } }
 
 .lifehack__name {
   margin-top: 0;
